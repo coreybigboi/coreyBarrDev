@@ -1,8 +1,18 @@
-{
-  "degree": "Bachelor of Information and Communication Technology (Majoring in Software Development)",
-  "university": "University of Tasmania",
-  "startYear": 2021,
-  "endYear": 2023,
-  "gpa": 6.88,
-  "image": ""
-}
+[
+  {
+    "id": 0,
+    "qualification": "Bachelor of Information and Communication Technology (Majoring in Software Development)",
+    "institution": "University of Tasmania",
+    "date": 2023,
+    "score": "attained gpa of 6.88 out of 7",
+    "image": ""
+  },
+  {
+    "id": 1,
+    "qualification": "TCE (Year 12 Completion)",
+    "institution": "Hobart College",
+    "date": 2016,
+    "score": "attained ATAR of 99.45 out of 99.95",
+    "image": ""
+  }
+]
