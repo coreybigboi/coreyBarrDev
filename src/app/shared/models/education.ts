@@ -3,7 +3,6 @@ export interface Education {
     qualification: string,
     institution: string,
     date: number,
-    score: string,
     result: string,
     image: string
 }

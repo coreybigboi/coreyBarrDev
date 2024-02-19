@@ -1,13 +1,25 @@
-.nav-bar{
+.nav-bar-container{
+    position: fixed;
+    top: 80px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
     background: #eee;
-    height: 60vh;
 }
 
-.nav-buttons{
+.side-nav{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
 }
 
 .nav-content{
     margin-left: 40px;
+}
+
+.active{
+    background-color: #63C5DA;
+    color: antiquewhite;
 }

@@ -4,7 +4,7 @@
     "name": "Sword Smithy",
     "year": 2022,
     "techStack": "Unity, C#",
-    "image": "",
+    "image": "/assets/sword-smithy.png",
     "link": "",
     "description": "Live out your dreams of being a medieval blacksmith! Hours of content with many weapons to craft and customers to satisfy."
   },
@@ -13,7 +13,7 @@
     "name": "Room 24: VR Experience",
     "year": 2022,
     "techStack": "Unity, C#",
-    "image": "",
+    "image": "/assets/room24.png",
     "link": "",
     "description": "A short VR experience that challenges the player to stack a tower of blocks while under extreme pressure."
   },
@@ -22,7 +22,7 @@
     "name": "Port Arthur AR Experience",
     "year": 2022,
     "techStack":"Unity, C#",
-    "image": "",
+    "image": "/assets/port-arthur.png",
     "link": "",
     "description": "Learn about the history of Port Arthur and its inhabitants through this astounding AR application."
   },
@@ -31,7 +31,7 @@
     "name": "Sad but Square",
     "year": 2021,
     "techStack":"Unity, C#",
-    "image": "",
+    "image": "/assets/yoda.png",
     "link": "",
     "description": "A charming puzzle game that challenges the player to navigate varied obstacle courses with limited movement options."
   },
@@ -40,7 +40,7 @@
     "name": "Cave Divin",
     "year": 2021,
     "techStack": "Unity, C#",
-    "image": "",
+    "image": "/assets/cave-diving.png",
     "link": "",
     "description": "Run, jump, and glide through the dangerous depths of the cursed cave to save your girlfriend."
   }

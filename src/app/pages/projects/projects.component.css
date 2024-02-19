@@ -1,8 +1,10 @@
 .project-list{
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
 }
 
-
-
+.project-card{
+    max-width: 300px;
+}

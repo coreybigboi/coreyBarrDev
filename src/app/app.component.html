@@ -1,13 +1,13 @@
 <main>
   <app-header></app-header>
-  <mat-sidenav-container class="nav-bar">
-    <mat-sidenav mode="side" opened>
-      <div class="nav-buttons">
-        <button mat-button routerLink="">Home</button>
-        <button mat-button routerLink="/experience">Experience</button>
-        <button mat-button routerLink="/education">Education</button>
-        <button mat-button routerLink="/projects">Projects</button>
-        <button mat-button routerLink="/contact">Contact Me</button>
+  <mat-sidenav-container class="nav-bar-container">
+    <mat-sidenav mode="side" opened class="side-nav">
+      <div>
+        <button mat-button routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</button>
+        <button mat-button routerLink="/experience" routerLinkActive="active">Experience</button>
+        <button mat-button routerLink="/education" routerLinkActive="active">Education</button>
+        <button mat-button routerLink="/projects" routerLinkActive="active">Projects</button>
+        <button mat-button routerLink="/contact" routerLinkActive="active">Contact Me</button>
       </div>
     </mat-sidenav>
     <mat-sidenav-content>
