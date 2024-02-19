@@ -1,3 +1,11 @@
 header{
     margin: 10px;
 }
+
+.header-links{
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    right: 40px;
+    top: 35px;
+}
