@@ -1,0 +1,13 @@
+.nav-bar{
+    background: #eee;
+    height: 60vh;
+}
+
+.nav-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-content{
+    margin-left: 40px;
+}

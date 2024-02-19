@@ -1,4 +1,19 @@
 <main>
   <app-header></app-header>
-  <app-home></app-home>
+  <mat-sidenav-container class="nav-bar">
+    <mat-sidenav mode="side" opened>
+      <div class="nav-buttons">
+        <button mat-button routerLink="">Home</button>
+        <button mat-button routerLink="/experience">Experience</button>
+        <button mat-button routerLink="/education">Education</button>
+        <button mat-button routerLink="/projects">Projects</button>
+        <button mat-button routerLink="/contact">Contact Me</button>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="nav-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </main>
