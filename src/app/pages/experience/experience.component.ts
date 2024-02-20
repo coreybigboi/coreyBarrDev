@@ -18,6 +18,8 @@ export class ExperienceComponent {
   }
 
   ngOnInit(){
-    this.experienceService.getExperience().then(result => {this.jobs = result});
+    this.experienceService.getExperience().subscribe((data: Job[]) => {
+      this.jobs = data;
+    })
   }
 }

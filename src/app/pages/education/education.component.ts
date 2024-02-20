@@ -19,6 +19,8 @@ export class EducationComponent {
   }
 
   ngOnInit(){
-    this.educationService.getEducation().then(result => {this.educationList = result});
+    this.educationService.getEducation().subscribe((data: Education[]) => {
+      this.educationList = data;
+    });
   }
 }

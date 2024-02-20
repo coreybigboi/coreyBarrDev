@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { ProjectsService } from './projects.service';
 import { Project } from '../../shared/models/project';
 import { NgFor } from '@angular/common';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
@@ -16,10 +17,12 @@ import { MatButtonModule } from '@angular/material/button';
 export class ProjectsComponent {
   projects: Project[] = [];
 
-  constructor(private projectService: ProjectsService){
+  constructor(private projectService: ProjectsService) {
   }
 
-  ngOnInit(){
-    this.projectService.getProjects().then(result => {this.projects = result});
+  ngOnInit() {
+    this.projectService.getProjects().subscribe((data: Project[]) => {
+      this.projects = data;
+    })
   }
 }

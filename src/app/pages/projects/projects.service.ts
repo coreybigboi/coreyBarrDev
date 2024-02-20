@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Project } from '../../shared/models/project';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+const PATH = './assets/data/projects.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  private dataPath = './assets/data/projects.json';
-
-  async getProjects(): Promise<Project[]>{
-    const response = await fetch(this.dataPath);
-    const result = await response.json();
-    return result;
+  getProjects(): Observable<Project[]>{
+    return this.http.get<Project[]>(PATH);
   }
 }

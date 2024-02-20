@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Education } from '../../shared/models/education';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+const PATH = './assets/data/education.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducationService {
-  
-  private dataPath = './assets/data/education.json';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  async getEducation(): Promise<Education[]>{
-    const response = await fetch(this.dataPath);
-    const result = await response.json();
-    return result;
+  getEducation(): Observable<Education[]>{
+   return this.http.get<Education[]>(PATH);
   }
 }
