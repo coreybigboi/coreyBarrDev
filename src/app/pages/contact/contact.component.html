@@ -1,2 +1,16 @@
 <h1>Contact Me ☎</h1>
-<h2>Under Construction 🚧</h2>
+<form [formGroup]="contactForm" class="contact-form" (submit)="submitContactForm()">
+    <mat-form-field appearance="outline">
+        <mat-label>Your Name</mat-label>
+        <input matInput placeholder="Type name here" formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Your Email</mat-label>
+        <input matInput placeholder="Type email here" formControlName="email">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Your Message</mat-label>
+        <textarea matInput rows="4" cols="50" placeholder="Type message here" formControlName="message"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Send Message</button>
+</form>

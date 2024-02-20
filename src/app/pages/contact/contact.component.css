@@ -1,0 +1,10 @@
+button{
+    width: fit-content;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+
