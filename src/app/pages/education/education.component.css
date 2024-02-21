@@ -1,3 +1,8 @@
+.education-page-container{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 .education-list{
     display: grid;
     grid-auto-flow: dense;
@@ -7,5 +12,4 @@
 
 .education-card{
     max-width: 800px;
-    right: 10px
 }

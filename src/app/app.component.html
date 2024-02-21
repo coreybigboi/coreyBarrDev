@@ -1,16 +1,16 @@
 <main>
   <mat-toolbar class="header" color="primary">
     <button mat-icon-button aria-label="menu button" (click)="drawer.toggle()">
-      <mat-icon>i</mat-icon>
+      <mat-icon>menu</mat-icon>
     </button>
-    <span>COREY BARR 💻</span>
+    <span class="header-title"><b>COREY BARR 💻</b></span>
     <span class="header-spacer"></span>
     <a class="header-link" href="https://github.com/coreybigboi">Github</a>
     <a class="header-link" href="https://au.linkedin.com/in/corey-barr">Linkedin</a>
     <a class="header-link" href="https://corey-bigboi.itch.io/">Itch.io</a>
   </mat-toolbar>
   <mat-drawer-container class="nav-bar-container">
-    <mat-drawer #drawer mode="side" opened>
+    <mat-drawer #drawer [mode]="mobileQuery.matches ? 'over' : 'side'" opened>
       <div class="side-nav">
         <button mat-button class="nav-button" routerLink="" routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}">Home</button>
