@@ -1,11 +1,13 @@
-header{
-    margin: 10px;
+a{
+    color: white;
+    margin-right: 20px;
 }
 
-.header-links{
-    display: flex;
-    gap: 20px;
-    position: fixed;
-    right: 40px;
-    top: 35px;
+.header{
+    margin: 0;
+    padding: 0;
+}
+
+.header-spacer{
+    flex: 1 1 auto;
 }

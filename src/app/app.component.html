@@ -1,19 +1,27 @@
 <main>
-  <app-header></app-header>
-  <mat-sidenav-container class="nav-bar-container">
-    <mat-sidenav mode="side" opened>
+  <mat-toolbar class="header" color="primary">
+    <button mat-icon-button aria-label="menu button" (click)="drawer.toggle()">
+      <mat-icon>i</mat-icon>
+    </button>
+    <span>COREY BARR 💻</span>
+    <span class="header-spacer"></span>
+    <a class="header-link" href="https://github.com/coreybigboi">Github</a>
+    <a class="header-link" href="https://au.linkedin.com/in/corey-barr">Linkedin</a>
+    <a class="header-link" href="https://corey-bigboi.itch.io/">Itch.io</a>
+  </mat-toolbar>
+  <mat-drawer-container class="nav-bar-container">
+    <mat-drawer #drawer mode="side" opened>
       <div class="side-nav">
-        <button mat-button class="nav-button" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</button>
+        <button mat-button class="nav-button" routerLink="" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}">Home</button>
         <button mat-button class="nav-button" routerLink="/experience" routerLinkActive="active">Experience</button>
         <button mat-button class="nav-button" routerLink="/education" routerLinkActive="active">Education</button>
         <button mat-button class="nav-button" routerLink="/projects" routerLinkActive="active">Projects</button>
         <button mat-button class="nav-button" routerLink="/contact" routerLinkActive="active">Contact Me</button>
       </div>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <div class="nav-content">
-        <router-outlet></router-outlet>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    </mat-drawer>
+    <div class="nav-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
 </main>
