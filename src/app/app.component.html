@@ -5,7 +5,9 @@
     </button>
     <span class="header-title"><b>{{mobileQuery.matches ? "COREY BARR 💻" : "COREY BARR | Software Developer 💻"}}</b></span>
     <span class="header-spacer"></span>
-    <a class="header-link" href="https://github.com/coreybigboi" matTooltip="View my Github page">Github</a>
+    <a class="header-link" href="https://github.com/coreybigboi" matTooltip="View my Github page">
+      <img class="header-logo" [src]="GITHUB_SVG">
+    </a>
     <a class="header-link" href="https://au.linkedin.com/in/corey-barr" matTooltip="View my Linkedin profile">Linkedin</a>
     <a class="header-link" href="https://corey-bigboi.itch.io/" matTooltip="Check out my games on Itch.io">Itch.io</a>
   </mat-toolbar>
