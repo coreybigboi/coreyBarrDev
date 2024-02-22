@@ -3,7 +3,7 @@
     <button mat-icon-button aria-label="menu button" (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span class="header-title"><b>COREY BARR 💻</b></span>
+    <span class="header-title"><b>{{mobileQuery.matches ? "COREY BARR 💻" : "COREY BARR | Software Developer 💻"}}</b></span>
     <span class="header-spacer"></span>
     <a class="header-link" href="https://github.com/coreybigboi">Github</a>
     <a class="header-link" href="https://au.linkedin.com/in/corey-barr">Linkedin</a>
