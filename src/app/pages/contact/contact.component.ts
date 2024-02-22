@@ -7,7 +7,7 @@ import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import { ContactService } from './contact.service';
 
 const MESSAGE = "Thank you for your message!";
-const ACTION = "Ok";
+const ACTION = "Close";
 
 @Component({
   selector: 'app-contact',
