@@ -10,7 +10,7 @@
     <a class="header-link" href="https://corey-bigboi.itch.io/">Itch.io</a>
   </mat-toolbar>
   <mat-drawer-container class="nav-bar-container">
-    <mat-drawer #drawer [mode]="mobileQuery.matches ? 'over' : 'side'" opened>
+    <mat-drawer #drawer [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="mobileQuery.matches ? false : true">
       <div class="side-nav">
         <button mat-button class="nav-button" routerLink="" routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}">Home</button>
