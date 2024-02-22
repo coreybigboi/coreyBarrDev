@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -16,6 +17,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     RouterOutlet, 
     HomeComponent, 
     HeaderComponent, 
+    FooterComponent,
     MatSidenavModule, 
     MatButtonModule, 
     RouterOutlet, 
