@@ -8,8 +8,12 @@
     <a class="header-link" href="https://github.com/coreybigboi" matTooltip="View my Github page">
       <img class="header-logo" [src]="GITHUB_SVG">
     </a>
-    <a class="header-link" href="https://au.linkedin.com/in/corey-barr" matTooltip="View my Linkedin profile">Linkedin</a>
-    <a class="header-link" href="https://corey-bigboi.itch.io/" matTooltip="Check out my games on Itch.io">Itch.io</a>
+    <a class="header-link" href="https://au.linkedin.com/in/corey-barr" matTooltip="View my Linkedin profile">
+      <img class="header-logo" [src]="LINKEDIN_SVG">
+    </a>
+    <a class="header-link" href="https://corey-bigboi.itch.io/" matTooltip="Check out my games on Itch.io">
+      <img class="header-logo" [src]="ITCH_SVG">
+    </a>
   </mat-toolbar>
   <mat-drawer-container class="nav-bar-container">
     <mat-drawer #drawer [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="mobileQuery.matches ? false : true">

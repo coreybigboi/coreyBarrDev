@@ -32,6 +32,8 @@ export class AppComponent {
   title = 'coreyBarrDev';
   
   GITHUB_SVG = '/assets/logos/github/github-mark-white.svg';
+  LINKEDIN_SVG = '/assets/logos/linkedin/linkedin.svg';
+  ITCH_SVG = '/assets/logos/itch/itchio-logo-textless-white.svg';
   
   mobileQuery: MediaQueryList;
   
