@@ -10,5 +10,4 @@ export class SortEducationByDatePipe implements PipeTransform {
   transform(educationList: Education[]): Education[] {
     return educationList.sort((a, b): number => { return b.date - a.date});
   }
-
 }
