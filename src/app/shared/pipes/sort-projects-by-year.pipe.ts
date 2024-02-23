@@ -10,5 +10,5 @@ export class SortProjectsByYearPipe implements PipeTransform {
   transform(projects: Project[]): Project[] {
     return projects.sort((a, b): number => {return b.year - a.year});
   }
-
+  
 }
