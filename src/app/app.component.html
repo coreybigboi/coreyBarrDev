@@ -1,9 +1,10 @@
-<main>
+<header>
   <mat-toolbar class="header" color="primary">
     <button mat-icon-button aria-label="menu button" (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span class="header-title"><b>{{mobileQuery.matches ? "COREY BARR 💻" : "COREY BARR | Software Developer 💻"}}</b></span>
+    <span class="header-title"><b>{{mobileQuery.matches ? "COREY BARR 💻" : "COREY BARR | Software Developer
+        💻"}}</b></span>
     <span class="header-spacer"></span>
     <a class="header-link" href="https://github.com/coreybigboi" matTooltip="View my Github page">
       <img class="header-logo" [src]="GITHUB_SVG">
@@ -15,20 +16,22 @@
       <img class="header-logo" [src]="ITCH_SVG">
     </a>
   </mat-toolbar>
-  <mat-drawer-container class="nav-bar-container">
-    <mat-drawer #drawer [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="mobileQuery.matches ? false : true">
-      <div class="side-nav">
-        <button mat-button class="nav-button" routerLink="" routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}">Home</button>
-        <button mat-button class="nav-button" routerLink="/experience" routerLinkActive="active">Experience</button>
-        <button mat-button class="nav-button" routerLink="/education" routerLinkActive="active">Education</button>
-        <button mat-button class="nav-button" routerLink="/projects" routerLinkActive="active">Projects</button>
-        <button mat-button class="nav-button" routerLink="/contact" routerLinkActive="active">Contact Me</button>
-      </div>
-    </mat-drawer>
-    <div class="nav-content">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-drawer-container>
+</header>
+<mat-drawer-container class="nav-bar-container">
+  <mat-drawer #drawer [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="mobileQuery.matches ? false : true">
+    <nav class="side-nav">
+      <button mat-button class="nav-button" routerLink="" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">Home</button>
+      <button mat-button class="nav-button" routerLink="/experience" routerLinkActive="active">Experience</button>
+      <button mat-button class="nav-button" routerLink="/education" routerLinkActive="active">Education</button>
+      <button mat-button class="nav-button" routerLink="/projects" routerLinkActive="active">Projects</button>
+      <button mat-button class="nav-button" routerLink="/contact" routerLinkActive="active">Contact Me</button>
+    </nav>
+  </mat-drawer>
+  <main class="nav-content">
+    <router-outlet></router-outlet>
+  </main>
+</mat-drawer-container>
+<footer>
   <app-footer></app-footer>
-</main>
+</footer>
