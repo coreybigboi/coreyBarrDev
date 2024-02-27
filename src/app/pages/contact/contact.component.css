@@ -5,7 +5,8 @@ button{
 .contact-form{
     display: flex;
     flex-direction: column;
-    min-width: 500px;
-    max-width: 1000px;
+    width: 60vw;
+    min-width: 250px;
+    max-width: 600px;
 }
 
