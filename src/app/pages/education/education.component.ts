@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EducationService } from './education.service';
+import { EducationService} from "../../shared/services/education.service";
 import { Education } from '../../shared/models/education';
 import { MatCardModule } from '@angular/material/card';
 import { NgFor } from '@angular/common';

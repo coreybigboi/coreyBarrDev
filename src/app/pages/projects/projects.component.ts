@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProjectsService } from './projects.service';
+import { ProjectsService} from "../../shared/services/projects.service";
 import { Project } from '../../shared/models/project';
 import { NgFor } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
