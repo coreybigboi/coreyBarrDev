@@ -10,6 +10,10 @@ p{
     padding-right: 40px;
 }
 
+.tabs-container{
+    width: 100%;
+}
+
 .sound-list-container{
     display: flex;
     flex-direction: column;
