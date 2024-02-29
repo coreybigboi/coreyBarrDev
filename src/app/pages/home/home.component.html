@@ -5,7 +5,7 @@
     <p>I live in Canberra with my girlfriend and our beautiful retired greyhound named Dobby 🐶.</p>
     <p>Welcome to my site, you can find its source code <a href="https://github.com/coreybigboi/coreyBarrDev">here</a>.</p>
     <div class="sound-list-container">
-        <h2>My top 14 favourite sounds</h2>
+        <h2>My top {{soundsList.length}} favourite sounds</h2>
         <ol class="sound-list">
             <li *ngFor="let sound of soundsList">
                 <p>{{sound.title}}</p>
