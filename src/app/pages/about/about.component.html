@@ -1,17 +1,27 @@
 <div class="about-page-container">
     <h1>About Me 🤔</h1>
     <p>I don't know what to say about myself, so instead I'll share some of my favourite stuff.</p>
-    <div class="sound-list-container">
-        <h2>My top {{soundsList.length}} favourite sounds 🔊</h2>
-        <ol class="sound-list">
-            <li *ngFor="let sound of soundsList">
-                <p>{{sound.title}}</p>
-                <audio controls class="audio-control">
-                    <source [src]="sound.filePath" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </li>
-        </ol>
-    </div>
+    <mat-tab-group>
+        <mat-tab label="Favourite Sounds">
+            <div class="sound-list-container">
+                <h2>My top {{soundsList.length}} favourite sounds 🔊</h2>
+                <ol class="sound-list">
+                    <li *ngFor="let sound of soundsList">
+                        <p>{{sound.title}}</p>
+                        <audio controls class="audio-control">
+                            <source [src]="sound.filePath" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </li>
+                </ol>
+            </div>
+        </mat-tab>
+        <mat-tab label="Favourite Movies">
+            <h2>My top favourite movies 🎥</h2>
+        </mat-tab>
+        <mat-tab label="Favourite Games">
+            <h2>My top favourite games 🎮</h2>
+        </mat-tab>
+    </mat-tab-group>
 </div>
 

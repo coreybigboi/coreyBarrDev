@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
 import {Sound} from "../../shared/models/sound";
 import {NgFor} from "@angular/common";
+import {MatTabsModule} from "@angular/material/tabs";
 import {FavouriteSoundsService} from "../../shared/services/favourite-sounds.service";
 
 @Component({
@@ -9,7 +10,8 @@ import {FavouriteSoundsService} from "../../shared/services/favourite-sounds.ser
   standalone: true,
     imports: [
         NgForOf,
-        NgFor
+        NgFor,
+        MatTabsModule
     ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
