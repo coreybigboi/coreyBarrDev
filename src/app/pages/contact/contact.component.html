@@ -2,15 +2,15 @@
 <form [formGroup]="contactForm" class="contact-form" (submit)="submitContactForm()">
     <mat-form-field appearance="outline">
         <mat-label>Your Name</mat-label>
-        <input matInput placeholder="Type name here" formControlName="name">
+        <input matInput placeholder="Type name here" formControlName="name" required>
     </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Your Email</mat-label>
-        <input matInput placeholder="Type email here" formControlName="email">
+        <input matInput placeholder="Type email here" formControlName="email" required>
     </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Your Message</mat-label>
-        <textarea matInput rows="4" cols="50" placeholder="Type message here" formControlName="message"></textarea>
+        <textarea matInput rows="4" cols="50" placeholder="Type message here" formControlName="message" required></textarea>
     </mat-form-field>
     <button mat-raised-button color="primary" type="submit">Send</button>
 </form>
