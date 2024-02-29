@@ -3,8 +3,7 @@
     <button mat-icon-button aria-label="menu button" (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span class="header-title"><b>{{mobileQuery.matches ? "COREY BARR 💻" : "COREY BARR | Software Developer
-        💻"}}</b></span>
+    <span class="header-title"><b>{{mobileQuery.matches ? "COREY BARR 💻" : "COREY BARR | Software Developer💻"}}</b></span>
     <span class="header-spacer"></span>
     <a class="header-link" href="https://github.com/coreybigboi" matTooltip="View my Github page">
       <img class="header-logo" [src]="GITHUB_SVG">
@@ -22,6 +21,7 @@
     <nav class="side-nav">
       <button mat-button class="nav-button" routerLink="" routerLinkActive="active"
         [routerLinkActiveOptions]="{exact: true}">Home</button>
+      <button mat-button class="nav-button" routerLink="/about" routerLinkActive="active">About Me</button>
       <button mat-button class="nav-button" routerLink="/experience" routerLinkActive="active">Experience</button>
       <button mat-button class="nav-button" routerLink="/education" routerLinkActive="active">Education</button>
       <button mat-button class="nav-button" routerLink="/projects" routerLinkActive="active">Projects</button>
