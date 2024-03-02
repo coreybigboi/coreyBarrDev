@@ -2,7 +2,7 @@
     <h1>My Projects 🛠</h1>
     <div class="project-list">
         <mat-card class="project-card" *ngFor="let project of projects | sortProjectsByYear;">
-            <img mat-card-image [src]="project.image">
+            <img class="project-img" mat-card-image [src]="project.image">
             <mat-card-header>
                 <mat-card-title><a [href]="project.link"><b>{{project.name}} ({{project.year}})</b></a></mat-card-title>
                 <mat-card-subtitle>{{project.techStack}}</mat-card-subtitle>
