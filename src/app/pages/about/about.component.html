@@ -4,7 +4,7 @@
     <mat-tab-group class="tabs-container">
         <mat-tab label="Sounds">
             <div class="sound-list-container">
-                <h2>My top {{soundsList.length}} favourite sounds 🔊</h2>
+                <h2 class="blue">My top {{soundsList.length}} favourite sounds 🔊</h2>
                 <ol class="sound-list">
                     <li *ngFor="let sound of soundsList">
                         <p>{{sound.title}}</p>
@@ -17,10 +17,10 @@
             </div>
         </mat-tab>
         <mat-tab label="Movies">
-            <h2>My top favourite movies 🎥</h2>
+            <h2 class="blue">My top favourite movies 🎥</h2>
         </mat-tab>
         <mat-tab label="Games">
-            <h2>My top favourite games 🎮</h2>
+            <h2 class="blue">My top favourite games 🎮</h2>
         </mat-tab>
     </mat-tab-group>
 </div>
