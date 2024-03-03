@@ -8,6 +8,7 @@ p{
     align-items: center;
     padding-left: 40px;
     padding-right: 40px;
+    max-width: 650px;
 }
 
 .home-img{
@@ -15,3 +16,6 @@ p{
     height: 200px;
 }
 
+.red{
+    color:cornflowerblue;
+}
