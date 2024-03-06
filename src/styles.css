@@ -24,3 +24,10 @@ a:hover {
 .blue{
     color: cornflowerblue;
 }
+
+/* Centres an item */
+.centred {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

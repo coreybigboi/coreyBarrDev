@@ -1,7 +1,3 @@
-p{
-    text-align: center;
-}
-
 .home-page-container{
     display: flex;
     flex-direction: column;
@@ -14,4 +10,10 @@ p{
 .home-img{
     width: 200px;
     height: 200px;
+}
+
+.centred{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
