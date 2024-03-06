@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { FavouriteGamesService } from "../../../shared/services/favourite-games.service";
+import {Game} from "../../../shared/models/game";
 
 @Component({
   selector: 'app-favourite-games',
@@ -9,5 +10,15 @@ import { Component } from '@angular/core';
   styleUrl: './favourite-games.component.css'
 })
 export class FavouriteGamesComponent {
+  games: Game[];
 
+  constructor(private gamesService: FavouriteGamesService) {
+    this.games = [];
+  }
+
+  ngOnInit(){
+    this.gamesService.getGames().subscribe((data: Game[]) => {
+      this.games = data;
+    });
+  }
 }
