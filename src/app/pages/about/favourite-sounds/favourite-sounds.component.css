@@ -14,3 +14,8 @@
 .audio-control{
     margin-left: 40px;
 }
+
+ol li::marker{
+    color: red;
+    font-weight: bold;
+}
