@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FavouriteGamesService } from "../../../shared/services/favourite-games.service";
-import {Game} from "../../../shared/models/game";
+import { Game } from "../../../shared/models/game";
+import { NgFor } from "@angular/common";
 
 @Component({
   selector: 'app-favourite-games',
   standalone: true,
-  imports: [],
+  imports: [NgFor],
   templateUrl: './favourite-games.component.html',
   styleUrl: './favourite-games.component.css'
 })

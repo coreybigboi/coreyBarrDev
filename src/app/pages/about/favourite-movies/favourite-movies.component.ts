@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import  { FavouriteMoviesService } from "../../../shared/services/favourite-movies.service";
-import {Movie} from "../../../shared/models/movie";
+import { Movie } from "../../../shared/models/movie";
+import { NgFor } from "@angular/common";
 
 @Component({
   selector: 'app-favourite-movies',
   standalone: true,
-  imports: [],
+  imports: [NgFor],
   templateUrl: './favourite-movies.component.html',
   styleUrl: './favourite-movies.component.css'
 })

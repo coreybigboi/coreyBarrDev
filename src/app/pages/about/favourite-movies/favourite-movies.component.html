@@ -1,1 +1,8 @@
-<h2 class="blue">My top favourite movies 🎥</h2>
+<div class="movie-list-container">
+    <h2 class="blue">My top {{movies.length}} favourite movies 🎥</h2>
+    <ol>
+        <li *ngFor="let movie of movies">
+            <h3>{{movie.title}} ({{movie.year}})</h3>
+        </li>
+    </ol>
+</div>
