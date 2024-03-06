@@ -1,1 +1,8 @@
-<h2 class="blue">My top favourite games 🎮</h2>
+<div class="favourite-games-container">
+    <h2 class="blue">My top {{games.length}} favourite games 🎮</h2>
+    <ol>
+        <li *ngFor="let game of games">
+            <h3>{{game.title}} ({{game.year}})</h3>
+        </li>
+    </ol>
+</div>
