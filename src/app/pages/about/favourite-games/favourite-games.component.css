@@ -5,6 +5,5 @@
 }
 
 ol li::marker{
-    color: red;
     font-weight: bold;
 }
