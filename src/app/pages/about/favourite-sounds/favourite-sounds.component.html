@@ -1,0 +1,12 @@
+<div class="sound-list-container">
+    <h2 class="blue">My top {{soundsList.length}} favourite sounds 🔊</h2>
+    <ol class="sound-list">
+        <li *ngFor="let sound of soundsList">
+            <p>{{sound.title}}</p>
+            <audio controls class="audio-control">
+                <source [src]="sound.filePath" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </li>
+    </ol>
+</div>
