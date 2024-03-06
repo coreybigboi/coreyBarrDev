@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Job } from '../../shared/models/job';
-import { ExperienceService} from "../../shared/services/experience.service";
+import { ExperienceService } from "../../shared/services/experience.service";
 import { MatCardModule } from '@angular/material/card';
 import { NgFor } from '@angular/common';
 import { SortExperienceByYearPipe } from '../../shared/pipes/sort-experience-by-year.pipe';
@@ -13,9 +13,10 @@ import { SortExperienceByYearPipe } from '../../shared/pipes/sort-experience-by-
   styleUrl: './experience.component.css'
 })
 export class ExperienceComponent {
-  jobs!: Job[];
+  jobs: Job[];
   
   constructor(private experienceService: ExperienceService){
+    this.jobs = [];
   }
 
   ngOnInit(){

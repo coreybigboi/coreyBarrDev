@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Job } from '../../shared/models/job';
+import { Job } from '../models/job';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -12,7 +12,7 @@ export class ExperienceService {
 
   constructor(private http: HttpClient) { }
 
-  getExperience(): Observable<Job[]>{
+  getExperience(): Observable<Job[]> {
     return this.http.get<Job[]>(PATH);
   }
 }

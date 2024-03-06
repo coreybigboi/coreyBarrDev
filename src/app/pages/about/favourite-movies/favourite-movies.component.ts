@@ -16,7 +16,7 @@ export class FavouriteMoviesComponent {
   constructor(private moviesService: FavouriteMoviesService) {
   }
 
-  ngOnInit(){
+  ngOnInit(): void {
     this.moviesService.getMovies().subscribe((data: Movie[]) => {
       this.movies = data;
     });

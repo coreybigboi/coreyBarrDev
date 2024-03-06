@@ -3,7 +3,7 @@ import { EducationService} from "../../shared/services/education.service";
 import { Education } from '../../shared/models/education';
 import { MatCardModule } from '@angular/material/card';
 import { NgFor } from '@angular/common';
-import {MatBottomSheet, MatBottomSheetModule, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { EducationDownloadsComponent } from './education-downloads/education-downloads.component';
 import { MatButtonModule } from '@angular/material/button';
 import { SortEducationByDatePipe } from '../../shared/pipes/sort-education-by-date.pipe';
@@ -19,7 +19,7 @@ import { SortEducationByDatePipe } from '../../shared/pipes/sort-education-by-da
 export class EducationComponent {
   educationList: Education[];
 
-  constructor(private educationService: EducationService, private _bottomSheet: MatBottomSheet){
+  constructor(private educationService: EducationService, private _bottomSheet: MatBottomSheet) {
     this.educationList = [];
   }
 

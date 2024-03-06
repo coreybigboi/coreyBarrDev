@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProjectsService} from "../../shared/services/projects.service";
+import { ProjectsService } from "../../shared/services/projects.service";
 import { Project } from '../../shared/models/project';
 import { NgFor } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -14,9 +14,10 @@ import { SortProjectsByYearPipe } from '../../shared/pipes/sort-projects-by-year
   styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
-  projects: Project[] = [];
+  projects: Project[];
 
   constructor(private projectService: ProjectsService) {
+    this.projects = [];
   }
 
   ngOnInit() {

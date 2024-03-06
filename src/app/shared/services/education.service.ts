@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Education } from '../../shared/models/education';
+import { Education } from '../models/education';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -12,7 +12,7 @@ export class EducationService {
 
   constructor(private http: HttpClient) { }
 
-  getEducation(): Observable<Education[]>{
+  getEducation(): Observable<Education[]> {
    return this.http.get<Education[]>(PATH);
   }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {Sound} from "../../../shared/models/sound";
-import {NgFor} from "@angular/common";
-import {FavouriteSoundsService} from "../../../shared/services/favourite-sounds.service";
+import { Sound } from "../../../shared/models/sound";
+import { NgFor } from "@angular/common";
+import { FavouriteSoundsService } from "../../../shared/services/favourite-sounds.service";
 
 @Component({
   selector: 'app-favourite-sounds',
@@ -17,7 +17,7 @@ export class FavouriteSoundsComponent {
     this.soundsList = [];
   }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.soundService.getSounds().subscribe((data: Sound[]) => {
       this.soundsList = data;
     });

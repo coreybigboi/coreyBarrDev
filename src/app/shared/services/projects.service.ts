@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Project } from '../../shared/models/project';
+import { Project } from '../models/project';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -12,7 +12,7 @@ export class ProjectsService {
 
   constructor(private http: HttpClient) { }
 
-  getProjects(): Observable<Project[]>{
+  getProjects(): Observable<Project[]> {
     return this.http.get<Project[]>(PATH);
   }
 }

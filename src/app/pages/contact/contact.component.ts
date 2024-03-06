@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button';
-import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ContactService } from './contact.service';
 
 const MESSAGE = "Thank you for your message!";
@@ -26,7 +26,7 @@ export class ContactComponent {
 
   constructor(private contactService: ContactService, private _snackBar: MatSnackBar){}
 
-  private resetForm(){
+  private resetForm(): void {
     this.contactForm.setValue({
       name: '',
       email: '',
@@ -34,7 +34,7 @@ export class ContactComponent {
     });
   }
 
-  submitContactForm(){
+  submitContactForm(): void {
     this.contactService.sendMessage(
       this.contactForm.value.name ?? '',
       this.contactForm.value.email ?? '',
