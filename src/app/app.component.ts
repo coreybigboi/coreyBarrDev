@@ -29,18 +29,18 @@ import {MatTooltipModule} from '@angular/material/tooltip';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'coreyBarrDev';
-  
-  GITHUB_SVG = '/assets/logos/github/github-mark-white.svg';
-  LINKEDIN_SVG = '/assets/logos/linkedin/linkedin.svg';
-  ITCH_SVG = '/assets/logos/itch/itchio-logo-textless-white.svg';
+  readonly Title = 'coreyBarrDev';
+  readonly GithubSvg = '/assets/logos/github/github-mark-white.svg';
+  readonly LinkedinSvg = '/assets/logos/linkedin/linkedin.svg';
+  readonly ItchSvg = '/assets/logos/itch/itchio-logo-textless-white.svg';
+  readonly MaxWidth = 800;
   
   mobileQuery: MediaQueryList;
   
   private _mobileQueryListener: () => void;
   
   constructor( changeDetectorRef: ChangeDetectorRef, media: MediaMatcher){
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.mobileQuery = media.matchMedia(`(max-width: ${this.MaxWidth}px)`);
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
