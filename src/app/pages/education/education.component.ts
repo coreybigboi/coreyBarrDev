@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { SortEducationByDatePipe } from '../../shared/pipes/sort-education-by-date.pipe';
 import { ColouredBoxComponent } from '../../shared/components/coloured-box/coloured-box.component';
 import { Colours } from '../../shared/enums/colours';
+import { AnimatedTextComponent } from '../../shared/components/animated-text/animated-text.component';
 
 @Component({
   selector: 'app-education',
@@ -19,7 +20,8 @@ import { Colours } from '../../shared/enums/colours';
     MatButtonModule, 
     MatBottomSheetModule, 
     SortEducationByDatePipe,
-    ColouredBoxComponent
+    ColouredBoxComponent,
+    AnimatedTextComponent
   ],
   templateUrl: './education.component.html',
   styleUrl: './education.component.css'
@@ -27,6 +29,7 @@ import { Colours } from '../../shared/enums/colours';
 export class EducationComponent {
   blue = Colours.Blue;
   educationList: Education[];
+  dialogue = "My education is pretty standard, I finished year 12 in 2016 and eventually got around to finishing my CS degree in 2023. I was always pretty good in school, but nothing beats real world experience!";
 
   constructor(private educationService: EducationService, private _bottomSheet: MatBottomSheet) {
     this.educationList = [];

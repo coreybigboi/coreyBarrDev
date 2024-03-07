@@ -18,10 +18,3 @@
 .inline-text {
     display: inline-block;
 }
-
-.dialog {
-    display: flex;
-    flex-direction: row;
-    max-width: 600px;
-    gap: 60px;
-}
