@@ -10,6 +10,6 @@ import { Colours } from '../../shared/enums/colours';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  blue = "#add8e6";
-  green = "#add8e6";
+  blue = Colours.Blue;
+  green = Colours.Green;
 }

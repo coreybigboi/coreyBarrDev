@@ -27,7 +27,7 @@
     bottom:45px;
     left: 0;
     right: 0;
-    background: white;
+    background: rgb(235, 235, 235);
     margin: 0;
     padding: 0;
 }
@@ -37,7 +37,7 @@
     flex-direction: column;
     width: 200px;
     height: 100%;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .nav-button{
