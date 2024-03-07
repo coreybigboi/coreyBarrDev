@@ -27,9 +27,10 @@ import { AnimatedTextComponent } from '../../shared/components/animated-text/ani
   styleUrl: './education.component.css'
 })
 export class EducationComponent {
-  blue = Colours.Blue;
+  readonly Dialogue = "My education is pretty standard, I finished year 12 in 2016 and eventually got around to finishing my CS degree in 2023. I was always pretty good in school, but nothing beats real world experience!";
+  readonly Blue = Colours.Blue;
+  
   educationList: Education[];
-  dialogue = "My education is pretty standard, I finished year 12 in 2016 and eventually got around to finishing my CS degree in 2023. I was always pretty good in school, but nothing beats real world experience!";
 
   constructor(private educationService: EducationService, private _bottomSheet: MatBottomSheet) {
     this.educationList = [];

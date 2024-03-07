@@ -1,15 +1,15 @@
 <div class="education-page-container">
     <h1>Education 🎓</h1>
     <div class="education-list">
-        <app-coloured-box [colour]="blue">
+        <app-coloured-box [colour]="Blue">
             <div class="dialog">
                 <img src="assets/self_graduate.gif" alt="Corey in graduation cloak." class="bordered" height="200" width="200">
-                <app-animated-text [text]="dialogue"></app-animated-text>
+                <app-animated-text [text]="Dialogue"></app-animated-text>
             </div>
         </app-coloured-box>
         <mat-card class="education-card zoom-in" *ngFor="let edu of educationList | sortEducationByDate;">
             <mat-card-header>
-                <mat-card-title class="blue"><b>{{edu.institution}}</b></mat-card-title>
+                <mat-card-title class="Blue"><b>{{edu.institution}}</b></mat-card-title>
                 <mat-card-subtitle>{{edu.qualification}} | {{edu.date}}</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>{{edu.result}}</mat-card-content>

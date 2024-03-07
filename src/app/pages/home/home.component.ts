@@ -10,6 +10,6 @@ import { Colours } from '../../shared/enums/colours';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  blue = Colours.Blue;
-  green = Colours.Green;
+  readonly Blue = Colours.Blue;
+  readonly Green = Colours.Green;
 }

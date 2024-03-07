@@ -8,11 +8,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './animated-text.component.css'
 })
 export class AnimatedTextComponent {
+  readonly IntervalTime = 7;
+  
   @Input()
   text!: string;
 
   displayedText: string;
-  readonly IntervalTime = 10;
 
   constructor() {
     this.displayedText = "";
