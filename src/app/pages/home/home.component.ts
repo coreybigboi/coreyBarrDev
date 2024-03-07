@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ColouredBoxComponent } from '../../shared/components/coloured-box/coloured-box.component';
+import { Colours } from '../../shared/enums/colours';
 
 @Component({
   selector: 'app-home',
@@ -9,4 +10,6 @@ import { ColouredBoxComponent } from '../../shared/components/coloured-box/colou
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  blue = "#add8e6";
+  green = "#add8e6";
 }

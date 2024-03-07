@@ -6,7 +6,7 @@ body {
     margin: 0; 
     font-family: 'Franklin Gothic Medium', Roboto, "Helvetica Neue", sans-serif; 
     font-size: large;
-    background-color: white;
+    background-color: rgb(26, 26, 26);
 }
 
 /* Style for regular anchor links */
@@ -30,4 +30,13 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Page colours */
+.background {
+  background-color: rgb(26, 26, 26);
+}
+
+.background-secondary {
+  background-color: rgb(31, 31, 31);
 }

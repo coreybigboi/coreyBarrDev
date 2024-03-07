@@ -11,6 +11,7 @@ p {
     align-items: center;
     justify-content: center;
     width: 100vw;
+    height: 45px;
     bottom: 0;
     background-color: whitesmoke;
 }
