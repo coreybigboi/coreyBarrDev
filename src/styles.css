@@ -36,6 +36,13 @@ img.bordered {
     color: cornflowerblue;
 }
 
+.dialog {
+  display: flex;
+  flex-direction: row;
+  max-width: 600px;
+  gap: 60px;
+}
+
 .zoom-in {
   transition: transform 0.3s ease;
 }
