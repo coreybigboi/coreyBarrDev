@@ -1,13 +1,19 @@
-<div class="projects-page-container">
-    <h1>My Projects 🛠</h1>
-    <div class="project-list">
-        <mat-card class="project-card zoom-in" *ngFor="let project of projects | sortProjectsByYear;">
-            <a [href]="project.link" target="_blank"target="_blank"><img class="project-img" mat-card-image [src]="project.image"></a>
-            <mat-card-header>
-                <mat-card-title><a [href]="project.link" target="_blank"><b>{{project.name}} ({{project.year}})</b></a></mat-card-title>
-                <mat-card-subtitle>{{project.techStack}}</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>{{project.description}}</mat-card-content>
-        </mat-card>
-    </div>
+<div class="loading-container" *ngIf="projects.length === 0; else content">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
+
+<ng-template #content>
+    <div class="projects-page-container">
+        <h1>My Projects 🛠</h1>
+        <div class="project-list">
+            <mat-card class="project-card zoom-in" *ngFor="let project of projects | sortProjectsByYear;">
+                <a [href]="project.link" target="_blank"target="_blank"><img class="project-img" mat-card-image [src]="project.image"></a>
+                <mat-card-header>
+                    <mat-card-title><a [href]="project.link" target="_blank"><b>{{project.name}} ({{project.year}})</b></a></mat-card-title>
+                    <mat-card-subtitle>{{project.techStack}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>{{project.description}}</mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</ng-template>
