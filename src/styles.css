@@ -25,15 +25,6 @@ img.bordered {
   border: 2px solid black;
 }
 
-img.greyscale-on-hover {
-  filter: grayscale(0%);
-}
-
-img.greyscale-on-hover:hover {
-  filter: grayscale(100%);
-}
-  
-
 /* Custom CSS Classes */
 .centred {
   display: flex;
