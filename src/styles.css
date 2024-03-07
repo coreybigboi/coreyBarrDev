@@ -9,40 +9,31 @@ body {
     background-color: rgb(26, 26, 26);
 }
 
-/* Style for regular anchor links */
+/* Element styling */
 a {
-  color: #007bff; /* Link color */
-  text-decoration: none; /* Remove default underline */
-  transition: color 0.3s ease; /* Smooth transition for color change */
+  color: #007bff; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
 }
 
-/* Hover effect for anchor links */
 a:hover {
-  color: #0056b3; /* Change color on hover */
+  color: #0056b3; 
 }
 
-.blue{
-    color: cornflowerblue;
+img.bordered {
+  display: block;
+  border: 2px solid black;
 }
+  
 
-/* Centres an item */
+/* Custom CSS Classes */
 .centred {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Page colours */
-.background {
-  background-color: rgb(26, 26, 26);
+.blue{
+    color: cornflowerblue;
 }
 
-.background-secondary {
-  background-color: rgb(31, 31, 31);
-}
-
-/* Image Classes */
-.bordered-image {
-  display: block;
-  border: 2px solid black;
-}
