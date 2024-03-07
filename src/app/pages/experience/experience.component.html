@@ -1,6 +1,12 @@
 <div class="experience-page-container">
     <h1>Experience 💼</h1>
     <div class="job-list">
+        <app-coloured-box [colour]="blue">
+            <div class="dialog">
+                <img src="assets/cb_work.gif" alt="Corey looking professional." class="bordered" height="200" width="200">
+                <p class="inline-text">Welcome to my job experience page! As you can see, I was a Blackjack dealer long before I wrote my first program and I haven't looked back since!</p>
+            </div>
+        </app-coloured-box>
         <mat-card class="job-card zoom-in" *ngFor="let job of jobs | sortExperienceByYear;">
             <mat-card-header>
                 <mat-card-title class="blue"><b>{{job.title}}</b></mat-card-title>
