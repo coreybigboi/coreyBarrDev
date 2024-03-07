@@ -38,9 +38,10 @@ img.bordered {
 
 .dialog {
   display: flex;
-  flex-direction: row;
-  max-width: 600px;
-  gap: 60px;
+  flex-direction: column;
+  max-width: 700px;
+  align-items: center;
+  justify-content: center;
 }
 
 .zoom-in {
