@@ -24,6 +24,14 @@ img.bordered {
   display: block;
   border: 2px solid black;
 }
+
+img.greyscale-on-hover {
+  filter: grayscale(0%);
+}
+
+img.greyscale-on-hover:hover {
+  filter: grayscale(100%);
+}
   
 
 /* Custom CSS Classes */
@@ -36,4 +44,13 @@ img.bordered {
 .blue{
     color: cornflowerblue;
 }
+
+.zoom-in {
+  transition: transform 0.3s ease;
+}
+
+.zoom-in:hover {
+  transform: scale(1.1);
+}
+
 
