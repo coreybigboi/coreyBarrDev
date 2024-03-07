@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { NgFor } from "@angular/common";
+import { NgIf } from '@angular/common';
+import { MatProgressBar } from '@angular/material/progress-bar';
 import { FavouriteGamesService } from "../../../shared/services/favourite-games.service";
 import { Game } from "../../../shared/models/game";
-import { NgFor } from "@angular/common";
 
 @Component({
   selector: 'app-favourite-games',
   standalone: true,
-  imports: [NgFor],
+  imports: [
+    NgFor,
+    NgIf,
+    MatProgressBar
+  ],
   templateUrl: './favourite-games.component.html',
   styleUrl: './favourite-games.component.css'
 })

@@ -1,8 +1,14 @@
-<div class="favourite-games-container">
-    <h2 class="blue">My top {{games.length}} favourite games 🎮</h2>
-    <ol>
-        <li *ngFor="let game of games">
-            <h3>{{game.title}} ({{game.year}})</h3>
-        </li>
-    </ol>
+<div class="loading-container" *ngIf="games.length === 0; else content">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
+
+<ng-template #content>
+    <div class="favourite-games-container">
+        <h2 class="blue">My top {{games.length}} favourite games 🎮</h2>
+        <ol>
+            <li *ngFor="let game of games">
+                <h3>{{game.title}} ({{game.year}})</h3>
+            </li>
+        </ol>
+    </div>
+</ng-template>
