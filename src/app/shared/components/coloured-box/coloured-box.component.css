@@ -1,6 +1,8 @@
 .coloured-box {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    width:80vw;
     margin: 20px;
     padding: 20px;
     border: 2px solid slategray;

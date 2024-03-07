@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
-import { EducationService} from "../../shared/services/education.service";
-import { Education } from '../../shared/models/education';
 import { MatCardModule } from '@angular/material/card';
 import { NgFor } from '@angular/common';
 import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { EducationDownloadsComponent } from './education-downloads/education-downloads.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SortEducationByDatePipe } from '../../shared/pipes/sort-education-by-date.pipe';
+import { EducationDownloadsComponent } from './education-downloads/education-downloads.component';
 import { ColouredBoxComponent } from '../../shared/components/coloured-box/coloured-box.component';
-import { Colours } from '../../shared/enums/colours';
 import { AnimatedTextComponent } from '../../shared/components/animated-text/animated-text.component';
+import { Colours } from '../../shared/enums/colours';
+import { Education } from '../../shared/models/education';
+import { EducationService} from "../../shared/services/education.service";
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-education',
@@ -21,7 +23,9 @@ import { AnimatedTextComponent } from '../../shared/components/animated-text/ani
     MatBottomSheetModule, 
     SortEducationByDatePipe,
     ColouredBoxComponent,
-    AnimatedTextComponent
+    AnimatedTextComponent,
+    MatProgressBarModule,
+    NgIf
   ],
   templateUrl: './education.component.html',
   styleUrl: './education.component.css'

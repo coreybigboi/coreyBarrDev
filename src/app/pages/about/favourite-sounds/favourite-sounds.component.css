@@ -1,18 +1,9 @@
-.sound-list-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .sound-list{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     gap: 40px;
-}
-
-.audio-control{
-    margin-left: 40px;
 }
 
 ol li::marker{

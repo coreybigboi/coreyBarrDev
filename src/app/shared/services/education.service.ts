@@ -13,6 +13,6 @@ export class EducationService {
   constructor(private http: HttpClient) { }
 
   getEducation(): Observable<Education[]> {
-   return this.http.get<Education[]>(PATH);
+   return this.http.get<Education[]>(PATH)
   }
 }
