@@ -1,18 +1,24 @@
-<div class="experience-page-container">
-    <h1>Experience 💼</h1>
-    <app-coloured-box [colour]="Blue">
-        <div class="dialog">
-            <img src="assets/cb_work.gif" alt="Corey looking professional." class="bordered centred" height="200" width="200">
-            <app-animated-text [text]="Dialogue"></app-animated-text>
-        </div>
-    </app-coloured-box>
-    <div class="job-list">
-        <mat-card class="job-card zoom-in" *ngFor="let job of jobs | sortExperienceByYear;">
-            <mat-card-header>
-                <mat-card-title class="blue"><b>{{job.title}}</b></mat-card-title>
-                <mat-card-subtitle>{{job.organisation}} | {{job.startDate}} - {{job.endDate}}</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>{{job.description}}</mat-card-content>
-        </mat-card>
-    </div>
+<div class="loading-container" *ngIf="jobs.length === 0; else content">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
+
+<ng-template #content>
+    <div class="experience-page-container">
+        <h1>Experience 💼</h1>
+        <app-coloured-box [colour]="Blue">
+            <div class="dialog">
+                <img src="assets/cb_work.gif" alt="Corey looking professional." class="bordered centred" height="200" width="200">
+                <app-animated-text [text]="Dialogue"></app-animated-text>
+            </div>
+        </app-coloured-box>
+        <div class="job-list">
+            <mat-card class="job-card zoom-in" *ngFor="let job of jobs | sortExperienceByYear;">
+                <mat-card-header>
+                    <mat-card-title class="blue"><b>{{job.title}}</b></mat-card-title>
+                    <mat-card-subtitle>{{job.organisation}} | {{job.startDate}} - {{job.endDate}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>{{job.description}}</mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</ng-template>
