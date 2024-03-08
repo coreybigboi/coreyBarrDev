@@ -77,7 +77,7 @@ export class TerminalTextComponent {
       hasFinished: false
     }
 
-    this.printWord("Hello there.", observer);
+    this.printWord(this.textList[textListIndex], observer);
 
     const interval = setInterval(() => {
       if (!observer.hasFinished) return;
