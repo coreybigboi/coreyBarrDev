@@ -1,6 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { Colours } from '../../enums/colours';
 
+interface IntervalObserver {
+  hasFinished: boolean;
+}
+
 @Component({
   selector: 'app-terminal-text',
   standalone: true,
@@ -10,8 +14,9 @@ import { Colours } from '../../enums/colours';
 })
 export class TerminalTextComponent {
   readonly colours: string[];
-  readonly speed: number;
-  
+  readonly intervalMilliseconds: number;
+  readonly waitTime: number;
+
   displayText: string;
   currentColour: string;
 
@@ -22,38 +27,64 @@ export class TerminalTextComponent {
     this.colours = [Colours.Blue, Colours.Green];
     this.displayText = "";
     this.currentColour = this.colours[0];
-    this.speed = 100;
+    this.intervalMilliseconds = 100;
+    this.waitTime = 1000;
   }
 
   ngOnInit() {
     this.animateConsoleText();
   }
 
+  // periodically prints a word one character at a time
+  printWord(word: string, observer: IntervalObserver): any {
+    let index = 0;
+
+    const interval = setInterval(() => {
+      if (index === word.length - 1) {
+        clearInterval(interval);
+        setTimeout(this.deleteWord.bind(this, observer), this.waitTime);
+      }
+      this.displayText += word[index];
+      index++;
+    }, this.intervalMilliseconds);
+  }
+
+  // periodically deletes a word one character at a time
+  deleteWord(observer: IntervalObserver) {
+    
+    const interval = setInterval(() => {
+      if (this.displayText === "") {
+        observer.hasFinished = true;
+        clearInterval(interval);
+        return;
+      }
+      
+      this.displayText = this.displayText.slice(0, -1)
+    }, this.intervalMilliseconds);
+  }
+
   animateConsoleText() {
     let textListIndex = 0;
     let coloursIndex = 0;
-    
-    let currentText = this.textList[0];
-    let currentTextIndex = 0;
-  
+
+    // shared memory to check when the process of printing a word has finished
+    const observer: IntervalObserver = {
+      hasFinished: false
+    }
+
+    this.printWord("Hello there.", observer);
 
     const interval = setInterval(() => {
-      // word has been fully printed
-      if (currentTextIndex >= currentText.length) {
-        this.displayText = ""; 
+      if (!observer.hasFinished) return;
 
-        // wrap around if reached end of array
-        textListIndex = textListIndex >= (this.textList.length - 1) ? 0 : textListIndex + 1;
-        coloursIndex = coloursIndex >= (this.colours.length - 1) ? 0 : coloursIndex + 1;
-        
-        console.log(textListIndex)
+      observer.hasFinished = false;
 
-        currentTextIndex = 0;
-        currentText = this.textList[textListIndex];
-        this.currentColour = this.colours[coloursIndex];
-      }
-      this.displayText += currentText[currentTextIndex];
-      currentTextIndex++;
-    }, this.speed)
+      // wrap around if reached end of array
+      textListIndex = textListIndex >= (this.textList.length - 1) ? 0 : textListIndex + 1;
+      coloursIndex = coloursIndex >= (this.colours.length - 1) ? 0 : coloursIndex + 1;
+
+      this.currentColour = this.colours[coloursIndex]
+      this.printWord(this.textList[textListIndex], observer);
+    }, this.intervalMilliseconds)
   }
 }
