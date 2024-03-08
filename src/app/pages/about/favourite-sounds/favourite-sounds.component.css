@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.sound-list{
+.sound-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +12,6 @@
     gap: 40px;
 }
 
-ol li::marker{
+ol li::marker {
     font-weight: bold;
 }
