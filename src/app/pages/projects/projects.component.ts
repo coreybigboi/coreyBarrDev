@@ -6,7 +6,10 @@ import { NgIf } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBar } from '@angular/material/progress-bar';
+import { ColouredBoxComponent } from '../../shared/components/coloured-box/coloured-box.component';
+import { AnimatedTextComponent } from '../../shared/components/animated-text/animated-text.component';
 import { SortProjectsByYearPipe } from '../../shared/pipes/sort-projects-by-year.pipe';
+import { Colours } from '../../shared/enums/colours';
 
 @Component({
   selector: 'app-projects',
@@ -17,12 +20,17 @@ import { SortProjectsByYearPipe } from '../../shared/pipes/sort-projects-by-year
     MatCardModule, 
     MatButtonModule, 
     MatProgressBar,
+    ColouredBoxComponent,
+    AnimatedTextComponent,
     SortProjectsByYearPipe
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
+  readonly Blue = Colours.Blue;
+  readonly Dialogue = "My favourite aspect of programming is being able to create almost anything that I can think of. Here are some of my personal favourite projects."
+
   projects: Project[];
 
   constructor(private projectService: ProjectsService) {
