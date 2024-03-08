@@ -26,7 +26,7 @@ export class TerminalTextComponent {
   textList!: string[]
 
   constructor() {
-    this.colours = [Colours.DarkBlue, Colours.DarkGreen, Colours.DarkOrange];
+    this.colours = [Colours.DarkBlue, Colours.DarkGreen, Colours.DarkGrey];
     this.displayText = "";
     this.currentColour = this.colours[0];
     this.intervalMilliseconds = 100;
