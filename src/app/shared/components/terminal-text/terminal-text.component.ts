@@ -16,7 +16,9 @@ export class TerminalTextComponent {
   readonly colours: string[];
   readonly intervalMilliseconds: number;
   readonly waitTime: number;
-
+  readonly cursorInterval: number;
+  
+  cursor: HTMLElement | null = null;
   displayText: string;
   currentColour: string;
 
@@ -24,15 +26,18 @@ export class TerminalTextComponent {
   textList!: string[]
 
   constructor() {
-    this.colours = [Colours.Blue, Colours.Green];
+    this.colours = [Colours.DarkBlue, Colours.DarkGreen, Colours.DarkOrange];
     this.displayText = "";
     this.currentColour = this.colours[0];
     this.intervalMilliseconds = 100;
-    this.waitTime = 1000;
+    this.waitTime = 1200;
+    this.cursorInterval = 500;
   }
-
+  
   ngOnInit() {
+    this.cursor = document.getElementById("cursor");
     this.animateConsoleText();
+    this.animateCursor();
   }
 
   // periodically prints a word one character at a time
@@ -85,6 +90,13 @@ export class TerminalTextComponent {
 
       this.currentColour = this.colours[coloursIndex]
       this.printWord(this.textList[textListIndex], observer);
-    }, this.intervalMilliseconds)
+    }, this.waitTime)
+  }
+
+  animateCursor() {
+    setInterval(() => {
+      if (this.cursor === null) return;
+      this.cursor.classList.toggle("hidden");
+    }, this.cursorInterval);
   }
 }

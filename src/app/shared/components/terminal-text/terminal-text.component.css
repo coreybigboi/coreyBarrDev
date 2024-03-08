@@ -1,4 +1,9 @@
 .terminal-text {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 4em;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.hidden {
+    visibility: hidden;
 }
