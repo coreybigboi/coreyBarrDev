@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
-import { Sound } from "../../../shared/models/sound";
 import { NgFor } from "@angular/common";
+import { NgIf } from '@angular/common';
+import { MatProgressBar } from '@angular/material/progress-bar';
+import { Sound } from "../../../shared/models/sound";
 import { FavouriteSoundsService } from "../../../shared/services/favourite-sounds.service";
 
 @Component({
   selector: 'app-favourite-sounds',
   standalone: true,
-  imports: [NgFor],
+  imports: [
+    NgFor,
+    NgIf,
+    MatProgressBar
+  ],
   templateUrl: './favourite-sounds.component.html',
   styleUrl: './favourite-sounds.component.css'
 })

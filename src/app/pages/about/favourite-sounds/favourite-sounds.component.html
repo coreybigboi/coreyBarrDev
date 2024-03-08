@@ -1,12 +1,18 @@
-<div class="sound-list-container">
-    <h2 class="blue">My top {{soundsList.length}} favourite sounds 🔊</h2>
-    <ol class="sound-list">
-        <li *ngFor="let sound of soundsList">
-            <h3>{{sound.title}}</h3>
-            <audio controls>
-                <source [src]="sound.filePath" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </li>
-    </ol>
+<div class="loading-container" *ngIf="soundsList.length === 0; else content">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
+
+<ng-template #content>
+    <div class="sound-list-container">
+        <h2 class="blue">My top {{soundsList.length}} favourite sounds 🔊</h2>
+        <ol class="sound-list">
+            <li *ngFor="let sound of soundsList">
+                <h3>{{sound.title}}</h3>
+                <audio controls>
+                    <source [src]="sound.filePath" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+        </ol>
+    </div>
+</ng-template>
