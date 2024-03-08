@@ -33,7 +33,7 @@ export class AppComponent {
   readonly GithubSvg = '/assets/logos/github/github-mark-white.svg';
   readonly LinkedinSvg = '/assets/logos/linkedin/linkedin.svg';
   readonly ItchSvg = '/assets/logos/itch/itchio-logo-textless-white.svg';
-  readonly MaxWidth = 800;
+  readonly MaxWidth = 1000;
   
   mobileQuery: MediaQueryList;
   
