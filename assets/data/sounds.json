@@ -36,37 +36,27 @@
   },
   {
     "id": 7,
-    "title": "Cowboy Bebop: Ed's Theme",
-    "filePath": "/assets/sounds/ed.mp3"
-  },
-  {
-    "id": 8,
     "title": "Evil Spider-man",
     "filePath": "/assets/sounds/spider-man.mp3"
   },
   {
-    "id": 9,
-    "title": "Death Note",
-    "filePath": "/assets/sounds/deathnote.mp3"
-  },
-  {
-    "id": 10,
+    "id": 8,
     "title": "Skyrim Level Up",
     "filePath": "/assets/sounds/skyrim.mp3"
   },
   {
-    "id": 11,
+    "id": 9,
     "title": "Pokemon Level Up",
     "filePath": "/assets/sounds/pokemon.mp3"
   },
   {
-    "id": 12,
+    "id": 10,
     "title": "Witcher 3",
     "filePath": "/assets/sounds/witcher3.mp3"
   },
   {
-    "id": 13,
-    "title": "Devil May Cry",
-    "filePath": "/assets/sounds/dmc.mp3"
+    "id": 11,
+    "title": "Cappuccino",
+    "filePath": "/assets/sounds/cappuccino.mp3"
   }
 ]
