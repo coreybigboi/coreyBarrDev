@@ -22,6 +22,6 @@ import { Colours } from '../../shared/enums/colours';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  readonly Dialogue = "I don't know what to say about myself, so instead I'll share some of my favourite stuff.";
+  readonly Dialogue = "I don't know what to say about myself, so instead I'll share some of my favourite stuff. ¯\\_(ツ)_/¯ ";
   readonly Blue = Colours.Blue;
 }
