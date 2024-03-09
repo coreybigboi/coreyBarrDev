@@ -47,7 +47,7 @@ export class TerminalTextComponent {
     const interval = setInterval(() => {
       if (index === word.length - 1) {
         clearInterval(interval);
-        setTimeout(this.deleteWord.bind(this, observer), this.waitTime);
+        observer.hasFinished = true;
       }
       this.displayText += word[index];
       index++;
@@ -82,8 +82,16 @@ export class TerminalTextComponent {
     const interval = setInterval(() => {
       if (!observer.hasFinished) return;
 
+      // reset observer for next unit of work
       observer.hasFinished = false;
 
+      // case 1: word has printed and needs to be deleted
+      if(this.displayText.length > 0) {
+        setTimeout(this.deleteWord.bind(this, observer), this.waitTime);
+        return;
+      }
+
+      // case 2: move onto next word
       // wrap around if reached end of array
       textListIndex = textListIndex >= (this.textList.length - 1) ? 0 : textListIndex + 1;
       coloursIndex = coloursIndex >= (this.colours.length - 1) ? 0 : coloursIndex + 1;
