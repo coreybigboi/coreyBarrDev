@@ -18,7 +18,6 @@ export class TerminalTextComponent {
   readonly waitTime: number;
   readonly cursorInterval: number;
   
-  cursor: HTMLElement | null = null;
   displayText: string;
   currentColour: string;
 
@@ -35,9 +34,9 @@ export class TerminalTextComponent {
   }
   
   ngOnInit() {
-    this.cursor = document.getElementById("cursor");
+    const cursor = document.getElementById("cursor");
+    this.animateCursor(cursor);
     this.animateConsoleText();
-    this.animateCursor();
   }
 
   // periodically prints a word one character at a time
@@ -110,10 +109,10 @@ export class TerminalTextComponent {
     }
   }
 
-  animateCursor() {
+  animateCursor(cursor: HTMLElement | null) {
+    if (cursor === null) return;
     setInterval(() => {
-      if (this.cursor === null) return;
-      this.cursor.classList.toggle("hidden");
+      cursor.classList.toggle("hidden");
     }, this.cursorInterval);
   }
 }
