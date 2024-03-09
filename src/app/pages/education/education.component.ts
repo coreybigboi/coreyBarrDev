@@ -8,6 +8,7 @@ import { SortEducationByDatePipe } from '../../shared/pipes/sort-education-by-da
 import { EducationDownloadsComponent } from './education-downloads/education-downloads.component';
 import { ColouredBoxComponent } from '../../shared/components/coloured-box/coloured-box.component';
 import { AnimatedTextComponent } from '../../shared/components/animated-text/animated-text.component';
+import { TerminalTextComponent } from '../../shared/components/terminal-text/terminal-text.component';
 import { Colours } from '../../shared/enums/colours';
 import { Education } from '../../shared/models/education';
 import { EducationService} from "../../shared/services/education.service";
@@ -24,6 +25,7 @@ import { NgIf } from '@angular/common';
     SortEducationByDatePipe,
     ColouredBoxComponent,
     AnimatedTextComponent,
+    TerminalTextComponent,
     MatProgressBarModule,
     NgIf
   ],
@@ -32,8 +34,9 @@ import { NgIf } from '@angular/common';
 })
 export class EducationComponent {
   readonly Dialogue = "My education is pretty standard, I finished year 12 in 2016 and eventually got around to finishing my CS degree in 2023. I was always pretty good in school, but nothing beats real world experience!";
+  readonly TerminalText = ["Education"];
   readonly Blue = Colours.Blue;
-  
+
   educationList: Education[];
 
   constructor(private educationService: EducationService, private _bottomSheet: MatBottomSheet) {

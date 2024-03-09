@@ -6,6 +6,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { MatProgressBar } from '@angular/material/progress-bar';
 import { SortExperienceByYearPipe } from '../../shared/pipes/sort-experience-by-year.pipe';
 import { ColouredBoxComponent } from '../../shared/components/coloured-box/coloured-box.component';
+import { TerminalTextComponent } from '../../shared/components/terminal-text/terminal-text.component';
 import { Colours } from '../../shared/enums/colours';
 import { AnimatedTextComponent } from '../../shared/components/animated-text/animated-text.component';
 
@@ -19,6 +20,7 @@ import { AnimatedTextComponent } from '../../shared/components/animated-text/ani
     SortExperienceByYearPipe,
     ColouredBoxComponent,
     AnimatedTextComponent,
+    TerminalTextComponent,
     MatProgressBar
   ],
   templateUrl: './experience.component.html',
@@ -26,6 +28,7 @@ import { AnimatedTextComponent } from '../../shared/components/animated-text/ani
 })
 export class ExperienceComponent {
   readonly Dialogue = "Welcome to my job experience page! As you can see, I was a Blackjack dealer long before I wrote my first program and I haven't looked back since!";
+  readonly TerminalText = ["Experience"];
   readonly Blue = Colours.Blue;
   
   jobs: Job[];
