@@ -41,7 +41,7 @@ export class TerminalTextComponent {
   }
 
   // periodically prints a word one character at a time
-  printWord(word: string, observer: IntervalObserver): any {
+  printWord(word: string, observer: IntervalObserver): void {
     let index = 0;
 
     const interval = setInterval(() => {
@@ -55,7 +55,7 @@ export class TerminalTextComponent {
   }
 
   // periodically deletes a word one character at a time
-  deleteWord(observer: IntervalObserver) {
+  deleteWord(observer: IntervalObserver): void {
     
     const interval = setInterval(() => {
       if (this.displayText === "") {
@@ -68,37 +68,46 @@ export class TerminalTextComponent {
     }, this.intervalMilliseconds);
   }
 
-  animateConsoleText() {
+  printMultipleWords(observer: IntervalObserver): void {
     let textListIndex = 0;
     let coloursIndex = 0;
+    this.printWord(this.textList[textListIndex], observer);
+    
+    const interval = setInterval(() => {
+      if (!observer.hasFinished) return;
+  
+      // reset observer for next unit of work
+      observer.hasFinished = false;
+  
+      // case 1: word has printed and needs to be deleted
+      if(this.displayText.length > 0) {
+        setTimeout(this.deleteWord.bind(this, observer), this.waitTime);
+        return;
+      }
+  
+      // case 2: move onto next word / colour
+      // wrap around if reached end of array
+      textListIndex = textListIndex >= (this.textList.length - 1) ? 0 : textListIndex + 1;
+      coloursIndex = coloursIndex >= (this.colours.length - 1) ? 0 : coloursIndex + 1;
+  
+      this.currentColour = this.colours[coloursIndex]
+      this.printWord(this.textList[textListIndex], observer);
+    }, this.waitTime)
+  }
+
+  animateConsoleText(): void {
+    if (this.textList.length === 0) return;
 
     // shared memory to check when the process of printing a word has finished
     const observer: IntervalObserver = {
       hasFinished: false
     }
 
-    this.printWord(this.textList[textListIndex], observer);
-
-    const interval = setInterval(() => {
-      if (!observer.hasFinished) return;
-
-      // reset observer for next unit of work
-      observer.hasFinished = false;
-
-      // case 1: word has printed and needs to be deleted
-      if(this.displayText.length > 0) {
-        setTimeout(this.deleteWord.bind(this, observer), this.waitTime);
-        return;
-      }
-
-      // case 2: move onto next word
-      // wrap around if reached end of array
-      textListIndex = textListIndex >= (this.textList.length - 1) ? 0 : textListIndex + 1;
-      coloursIndex = coloursIndex >= (this.colours.length - 1) ? 0 : coloursIndex + 1;
-
-      this.currentColour = this.colours[coloursIndex]
-      this.printWord(this.textList[textListIndex], observer);
-    }, this.waitTime)
+    if (this.textList.length > 1){
+      this.printMultipleWords(observer);
+    } else {
+      this.printWord(this.textList[0], observer)
+    }
   }
 
   animateCursor() {

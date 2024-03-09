@@ -16,5 +16,5 @@ import { Colours } from '../../shared/enums/colours';
 export class HomeComponent {
   readonly Blue = Colours.Blue;
   readonly Green = Colours.Green;
-  readonly textList = ["Hello world", "I'm Corey", "I code"]
+  readonly textList = ["Hello world", "I'm Corey", "I code"];
 }
