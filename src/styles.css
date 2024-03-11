@@ -20,11 +20,6 @@ a:hover {
   color: #0056b3; 
 }
 
-img.bordered {
-  display: block;
-  border: 2px solid black;
-}
-
 /* Custom CSS Classes */
 .centred {
   display: flex;
