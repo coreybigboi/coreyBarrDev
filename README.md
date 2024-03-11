@@ -1,5 +1,7 @@
 # CoreyBarrDev
 
+## Welcome to the source code for my personal site. Find the deployed site [here](https://coreybigboi.github.io/). 💻
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 
 ## Development server
