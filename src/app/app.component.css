@@ -27,7 +27,7 @@
     bottom:45px;
     left: 0;
     right: 0;
-    background: rgb(235, 235, 235);
+    background: linear-gradient(to bottom, white, white 70%, whitesmoke); /* white to icy blue */
     margin: 0;
     padding: 0;
 }
