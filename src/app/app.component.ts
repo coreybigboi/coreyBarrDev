@@ -70,9 +70,6 @@ export class AppComponent {
       case '5':
         this.router.navigate([ProjectsRoute]);
         break;
-      default:
-        this.router.navigate([HomeRoute]);
-        break;
     }
   }
 }
