@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { Colours } from '../../enums/colours';
 
 interface IntervalObserver {
@@ -24,6 +24,9 @@ export class TerminalTextComponent {
   @Input()
   textList!: string[]
 
+  @ViewChild('cursor') 
+  cursorElementRef!: ElementRef;
+
   constructor() {
     this.colours = [Colours.DarkBlue, Colours.DarkGreen, Colours.DarkGrey];
     this.displayText = "";
@@ -34,9 +37,11 @@ export class TerminalTextComponent {
   }
   
   ngOnInit() {
-    const cursor = document.getElementById("cursor");
-    this.animateCursor(cursor);
     this.animateConsoleText();
+  }
+  
+  ngAfterViewInit() {
+    this.animateCursor(this.cursorElementRef.nativeElement);
   }
 
   // periodically prints a word one character at a time
