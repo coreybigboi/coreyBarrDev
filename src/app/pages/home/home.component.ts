@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgOptimizedImage } from "@angular/common";
 import { ColouredBoxComponent } from '../../shared/components/coloured-box/coloured-box.component';
 import { TerminalTextComponent } from '../../shared/components/terminal-text/terminal-text.component';
 import { Colours } from '../../shared/enums/colours';
@@ -7,6 +8,7 @@ import { Colours } from '../../shared/enums/colours';
   selector: 'app-home',
   standalone: true,
   imports: [
+      NgOptimizedImage,
     ColouredBoxComponent,
     TerminalTextComponent
   ],

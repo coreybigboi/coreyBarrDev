@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { NgFor, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { NgFor } from '@angular/common';
 import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -12,14 +12,14 @@ import { TerminalTextComponent } from '../../shared/components/terminal-text/ter
 import { Colours } from '../../shared/enums/colours';
 import { Education } from '../../shared/models/education';
 import { EducationService} from "../../shared/services/education.service";
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-education',
   standalone: true,
   imports: [
+      NgOptimizedImage,
     MatCardModule, 
-    NgFor, 
+    NgFor,
     MatButtonModule, 
     MatBottomSheetModule, 
     SortEducationByDatePipe,

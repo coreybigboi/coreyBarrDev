@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { ProjectsService } from "../../shared/services/projects.service";
-import { Project } from '../../shared/models/project';
-import { NgFor } from '@angular/common';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBar } from '@angular/material/progress-bar';
@@ -10,7 +7,9 @@ import { ColouredBoxComponent } from '../../shared/components/coloured-box/colou
 import { AnimatedTextComponent } from '../../shared/components/animated-text/animated-text.component';
 import { TerminalTextComponent } from '../../shared/components/terminal-text/terminal-text.component';
 import { SortProjectsByYearPipe } from '../../shared/pipes/sort-projects-by-year.pipe';
+import { ProjectsService } from "../../shared/services/projects.service";
 import { Colours } from '../../shared/enums/colours';
+import { Project } from '../../shared/models/project';
 
 @Component({
   selector: 'app-projects',
@@ -18,6 +17,7 @@ import { Colours } from '../../shared/enums/colours';
   imports: [
     NgFor, 
     NgIf,
+      NgOptimizedImage,
     MatCardModule, 
     MatButtonModule, 
     MatProgressBar,
