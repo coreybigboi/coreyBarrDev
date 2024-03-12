@@ -7,14 +7,14 @@
         <app-terminal-text [textList]="TerminalText"></app-terminal-text>
         <app-coloured-box [colour]="Blue">
             <div class="dialog">
-                <img ngSrc="assets/cb_idle.gif" height="200" width="200" alt="Gif of Corey"/>
+                <img ngSrc="assets/cb_idle.gif" height="160" width="160" alt="Gif of Corey" priority/>
                 <app-animated-text [text]="Dialogue"></app-animated-text>
             </div>
         </app-coloured-box>
         <div class="project-list">
             <mat-card class="project-card zoom-in" *ngFor="let project of projects | sortProjectsByYear;">
                 <a [href]="project.link" target="_blank">
-                    <img class="project-img" mat-card-image [ngSrc]="project.image" width="400" height="400" [alt]="'Image of ' + project.name">
+                    <img mat-card-image [ngSrc]="project.image" width="300" height="300" [alt]="'Image of ' + project.name" priority>
                     <span class="screen-reader-text">Link to {{project.name}}</span>
                 </a>
                 <mat-card-header>
