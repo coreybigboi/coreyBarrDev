@@ -1,14 +1,14 @@
 import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { FooterComponent } from './core/footer/footer.component';
+import { NgOptimizedImage } from '@angular/common';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import {MediaMatcher} from '@angular/cdk/layout';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import {MediaMatcher} from '@angular/cdk/layout';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { Router } from '@angular/router';
+import { FooterComponent } from './core/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const HomeRoute = "/";
 const AboutRoute = "/about";
@@ -20,6 +20,7 @@ const ProjectsRoute = "/projects";
   selector: 'app-root',
   standalone: true,
   imports: [
+    NgOptimizedImage,
     RouterOutlet, 
     HomeComponent, 
     FooterComponent,
