@@ -27,8 +27,12 @@ a:hover {
   justify-content: center;
 }
 
-.blue{
+.blue {
     color: cornflowerblue;
+}
+
+.red {
+    color: #ec0000;
 }
 
 .dialog {

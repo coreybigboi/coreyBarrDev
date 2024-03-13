@@ -14,7 +14,7 @@
         <div class="job-list">
             <mat-card class="job-card zoom-in" *ngFor="let job of jobs | sortExperienceByYear;">
                 <mat-card-header>
-                    <mat-card-title class="blue"><b>{{job.title}}</b></mat-card-title>
+                    <mat-card-title class="red"><b>{{job.title}}</b></mat-card-title>
                     <mat-card-subtitle>{{job.organisation}} | {{job.startDate}} - {{job.endDate}}</mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>{{job.description}}</mat-card-content>
