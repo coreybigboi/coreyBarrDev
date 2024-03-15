@@ -10,6 +10,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from './core/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { KeycapComponent } from "./shared/components/keycap/keycap.component";
+import { SpacerComponent } from "./shared/components/spacer/spacer.component";
 
 const HomeRoute = "/";
 const AboutRoute = "/about";
@@ -34,7 +35,8 @@ const ProjectsRoute = "/projects";
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
-      KeycapComponent
+      KeycapComponent,
+      SpacerComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
