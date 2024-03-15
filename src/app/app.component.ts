@@ -1,14 +1,15 @@
 import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import {MediaMatcher} from '@angular/cdk/layout';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from './core/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
+import { KeycapComponent } from "./shared/components/keycap/keycap.component";
 
 const HomeRoute = "/";
 const AboutRoute = "/about";
@@ -32,6 +33,7 @@ const ProjectsRoute = "/projects";
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
+      KeycapComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
