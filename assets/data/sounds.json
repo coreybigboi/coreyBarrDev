@@ -1,62 +1,32 @@
 [
   {
-    "id": 0,
-    "title": "Berserk Theme",
-    "filePath": "/assets/sounds/guts.mp3"
-  },
-  {
-    "id": 1,
+    "id": 0, 
     "title": "Lego Yoda Death",
     "filePath": "/assets/sounds/yoda.mp3"
   },
   {
-    "id": 2,
+    "id": 1,
     "title": "Lego Bricks",
     "filePath": "/assets/sounds/lego.mp3"
   },
   {
-    "id": 3,
-    "title": "Star Wars Blaster",
-    "filePath": "/assets/sounds/blaster.mp3"
+    "id": 2,
+    "title": "Berserk Theme",
+    "filePath": "/assets/sounds/guts.mp3"
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "Dark Souls New Area",
     "filePath": "/assets/sounds/darksouls.mp3"
   },
   {
-    "id": 5,
-    "title": "Jill Sandwich",
-    "filePath": "/assets/sounds/jill.mp3"
-  },
-  {
-    "id": 6,
+    "id": 4,
     "title": "Cowboy Bebop: TANK!",
     "filePath": "/assets/sounds/bebop.mp3"
   },
   {
-    "id": 7,
+    "id": 5,
     "title": "Evil Spider-man",
     "filePath": "/assets/sounds/spider-man.mp3"
-  },
-  {
-    "id": 8,
-    "title": "Skyrim Level Up",
-    "filePath": "/assets/sounds/skyrim.mp3"
-  },
-  {
-    "id": 9,
-    "title": "Pokemon Level Up",
-    "filePath": "/assets/sounds/pokemon.mp3"
-  },
-  {
-    "id": 10,
-    "title": "Witcher 3",
-    "filePath": "/assets/sounds/witcher3.mp3"
-  },
-  {
-    "id": 11,
-    "title": "Cappuccino",
-    "filePath": "/assets/sounds/cappuccino.mp3"
   }
 ]
