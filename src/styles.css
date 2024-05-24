@@ -35,10 +35,6 @@ p {
     color: cornflowerblue;
 }
 
-.red {
-    color: #c40000;
-}
-
 .dialog {
   display: flex;
   flex-direction: column;

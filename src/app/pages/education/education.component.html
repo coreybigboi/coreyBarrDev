@@ -14,7 +14,7 @@
         <div class="education-list">
             <mat-card class="education-card zoom-in" *ngFor="let edu of educationList | sortEducationByDate;">
                 <mat-card-header>
-                    <mat-card-title class="red"><b>{{edu.institution}}</b></mat-card-title>
+                    <mat-card-title><b>{{edu.institution}}</b></mat-card-title>
                     <mat-card-subtitle>{{edu.qualification}} | {{edu.date}}</mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
