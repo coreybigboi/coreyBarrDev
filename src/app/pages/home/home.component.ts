@@ -8,7 +8,7 @@ import { Colours } from '../../shared/enums/colours';
   selector: 'app-home',
   standalone: true,
   imports: [
-      NgOptimizedImage,
+    NgOptimizedImage,
     ColouredBoxComponent,
     TerminalTextComponent
   ],

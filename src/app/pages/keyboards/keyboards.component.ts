@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { TerminalTextComponent } from '../../shared/components/terminal-text/terminal-text.component';
+import { NgOptimizedImage } from '@angular/common';
+
+@Component({
+  selector: 'app-keyboards',
+  standalone: true,
+  imports: [
+    TerminalTextComponent,
+    NgOptimizedImage
+  ],
+  templateUrl: './keyboards.component.html',
+  styleUrl: './keyboards.component.css'
+})
+export class KeyboardsComponent {
+
+}
