@@ -17,6 +17,7 @@ const AboutRoute = "/about";
 const ExperienceRoute = "/experience";
 const EducationRoute = "/education";
 const ProjectsRoute = "/projects";
+const KeyboardsRoute = "/keyboards";
 
 @Component({
   selector: 'app-root',
@@ -75,6 +76,9 @@ export class AppComponent {
         break;
       case '5':
         this.router.navigate([ProjectsRoute]);
+        break;
+      case '6':
+        this.router.navigate([KeyboardsRoute]);
         break;
     }
   }
