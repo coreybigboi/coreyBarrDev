@@ -7,7 +7,7 @@ import { ColouredBoxComponent } from '../../shared/components/coloured-box/colou
 import { AnimatedTextComponent } from '../../shared/components/animated-text/animated-text.component';
 import { TerminalTextComponent } from '../../shared/components/terminal-text/terminal-text.component';
 import { SortProjectsByYearPipe } from '../../shared/pipes/sort-projects-by-year.pipe';
-import { ProjectsService } from "../../shared/services/projects.service";
+import { ProjectsService } from "../data-access/projects.service";
 import { Colours } from '../../shared/enums/colours';
 import { Project } from '../../shared/models/project';
 

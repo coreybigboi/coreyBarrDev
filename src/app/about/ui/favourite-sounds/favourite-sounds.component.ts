@@ -3,7 +3,7 @@ import { NgFor } from "@angular/common";
 import { NgIf } from '@angular/common';
 import { MatProgressBar } from '@angular/material/progress-bar';
 import { Sound } from "../../../shared/models/sound";
-import { FavouriteSoundsService } from "../../../shared/services/favourite-sounds.service";
+import { FavouriteSoundsService } from "../../data-access/favourite-sounds.service";
 
 @Component({
   selector: 'app-favourite-sounds',

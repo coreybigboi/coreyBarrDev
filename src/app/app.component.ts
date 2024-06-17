@@ -8,7 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from './core/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './home/feature/home.component';
 import { KeycapComponent } from "./shared/components/keycap/keycap.component";
 import { SpacerComponent } from "./shared/components/spacer/spacer.component";
 

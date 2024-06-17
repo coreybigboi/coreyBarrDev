@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgFor } from "@angular/common";
 import { NgIf } from '@angular/common';
 import { MatProgressBar } from '@angular/material/progress-bar';
-import { FavouriteGamesService } from "../../../shared/services/favourite-games.service";
+import { FavouriteGamesService } from "../../data-access/favourite-games.service";
 import { Game } from "../../../shared/models/game";
 
 @Component({

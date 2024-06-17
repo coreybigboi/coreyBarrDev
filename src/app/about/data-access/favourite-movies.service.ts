@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Game } from "../models/game";
+import { Movie } from "../../shared/models/movie";
 import { Observable } from "rxjs";
 
-const PATH = './assets/data/games.json';
+const PATH = './assets/data/movies.json'
 
 @Injectable({
   providedIn: 'root'
 })
-export class FavouriteGamesService {
+export class FavouriteMoviesService {
 
   constructor(private http: HttpClient) { }
 
-  getGames(): Observable<Game[]> {
-    return this.http.get<Game[]>(PATH);
+  getMovies(): Observable<Movie[]> {
+    return this.http.get<Movie[]>(PATH);
   }
 }

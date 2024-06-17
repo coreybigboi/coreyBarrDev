@@ -5,13 +5,13 @@ import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-s
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SortEducationByDatePipe } from '../../shared/pipes/sort-education-by-date.pipe';
-import { EducationDownloadsComponent } from './education-downloads/education-downloads.component';
+import { EducationDownloadsComponent } from '../ui/education-downloads/education-downloads.component';
 import { ColouredBoxComponent } from '../../shared/components/coloured-box/coloured-box.component';
 import { AnimatedTextComponent } from '../../shared/components/animated-text/animated-text.component';
 import { TerminalTextComponent } from '../../shared/components/terminal-text/terminal-text.component';
 import { Colours } from '../../shared/enums/colours';
 import { Education } from '../../shared/models/education';
-import { EducationService} from "../../shared/services/education.service";
+import { EducationService} from "../data-access/education.service";
 
 @Component({
   selector: 'app-education',
