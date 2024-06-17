@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TerminalTextComponent } from '../../shared/components/terminal-text/terminal-text.component';
+import { TerminalTextComponent } from '../../shared/ui/terminal-text/terminal-text.component';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({

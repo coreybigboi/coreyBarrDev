@@ -4,9 +4,9 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { FavouriteSoundsComponent } from '../ui/favourite-sounds/favourite-sounds.component';
 import { FavouriteMoviesComponent } from '../ui/favourite-movies/favourite-movies.component';
 import { FavouriteGamesComponent } from '../ui/favourite-games/favourite-games.component';
-import { AnimatedTextComponent } from '../../shared/components/animated-text/animated-text.component';
-import { ColouredBoxComponent } from '../../shared/components/coloured-box/coloured-box.component';
-import { TerminalTextComponent } from '../../shared/components/terminal-text/terminal-text.component';
+import { AnimatedTextComponent } from '../../shared/ui/animated-text/animated-text.component';
+import { ColouredBoxComponent } from '../../shared/ui/coloured-box/coloured-box.component';
+import { TerminalTextComponent } from '../../shared/ui/terminal-text/terminal-text.component';
 import { Colours } from '../../shared/enums/colours';
 
 @Component({

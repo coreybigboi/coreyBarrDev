@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgOptimizedImage } from "@angular/common";
-import { ColouredBoxComponent } from '../../shared/components/coloured-box/coloured-box.component';
-import { TerminalTextComponent } from '../../shared/components/terminal-text/terminal-text.component';
+import { ColouredBoxComponent } from '../../shared/ui/coloured-box/coloured-box.component';
+import { TerminalTextComponent } from '../../shared/ui/terminal-text/terminal-text.component';
 import { Colours } from '../../shared/enums/colours';
 
 @Component({
