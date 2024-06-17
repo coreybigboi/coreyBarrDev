@@ -1,27 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { max-height: 100vh; }
-body { 
-    padding: 0; 
-    margin: 0; 
-    font-family: monospace;
-    font-size: large;
-    background-color: rgb(26, 26, 26);
+html,
+body {
+  max-height: 100vh;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  font-size: large;
+  background-color: rgb(26, 26, 26);
 }
 
 /* Element styling */
 a {
-  color: #2A00FF; 
-  text-decoration: none; 
-  transition: color 0.3s ease; 
+  color: #2A00FF;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #ff8800; 
+  color: #ff8800;
 }
 
 p {
-    color: #3a3a3a;
+  color: #3a3a3a;
 }
 
 /* Custom CSS Classes */
@@ -31,8 +35,18 @@ p {
   justify-content: center;
 }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 .blue {
-    color: cornflowerblue;
+  color: cornflowerblue;
 }
 
 .dialog {
@@ -64,5 +78,3 @@ p {
 .zoom-in:hover {
   transform: scale(1.1);
 }
-
-

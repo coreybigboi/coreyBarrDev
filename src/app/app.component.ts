@@ -8,7 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from './core/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './home/feature/home.component';
 import { KeycapComponent } from "./shared/components/keycap/keycap.component";
 import { SpacerComponent } from "./shared/components/spacer/spacer.component";
 
@@ -17,6 +17,7 @@ const AboutRoute = "/about";
 const ExperienceRoute = "/experience";
 const EducationRoute = "/education";
 const ProjectsRoute = "/projects";
+const KeyboardsRoute = "/keyboards";
 
 @Component({
   selector: 'app-root',
@@ -75,6 +76,9 @@ export class AppComponent {
         break;
       case '5':
         this.router.navigate([ProjectsRoute]);
+        break;
+      case '6':
+        this.router.navigate([KeyboardsRoute]);
         break;
     }
   }
