@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor, NgIf, NgOptimizedImage } from '@angular/common';
+import { AsyncPipe, NgFor, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatButtonModule } from '@angular/material/button';
@@ -11,17 +11,19 @@ import { AnimatedTextComponent } from '../../shared/ui/animated-text/animated-te
 import { TerminalTextComponent } from '../../shared/ui/terminal-text/terminal-text.component';
 import { Colours } from '../../shared/enums/colours';
 import { Education } from '../../shared/models/education';
-import { EducationService} from "../data-access/education.service";
+import { EducationService } from "../data-access/education.service";
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-education',
   standalone: true,
   imports: [
-      NgOptimizedImage,
-    MatCardModule, 
+    NgOptimizedImage,
+    MatCardModule,
     NgFor,
-    MatButtonModule, 
-    MatBottomSheetModule, 
+    MatButtonModule,
+    MatBottomSheetModule,
+    AsyncPipe,
     SortEducationByDatePipe,
     ColouredBoxComponent,
     AnimatedTextComponent,
@@ -37,16 +39,10 @@ export class EducationComponent {
   readonly TerminalText = ["Education"];
   readonly Blue = Colours.Blue;
 
-  educationList: Education[];
+  educationList: Observable<Education[]>;
 
   constructor(private educationService: EducationService, private _bottomSheet: MatBottomSheet) {
-    this.educationList = [];
-  }
-
-  ngOnInit(){
-    this.educationService.getEducation().subscribe((data: Education[]) => {
-      this.educationList = data;
-    });
+    this.educationList = this.educationService.getEducation();
   }
 
   openBottomSheet(): void {

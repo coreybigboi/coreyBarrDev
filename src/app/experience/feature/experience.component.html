@@ -14,15 +14,15 @@
     </app-coloured-box>
     <div class="job-list">
         @for (job of (jobs | async) ?? [] | sortExperienceByYear; track job.id) {
-            <mat-card class="job-card zoom-in">
-                <mat-card-header>
-                    <mat-card-title><b>{{job.title}}</b></mat-card-title>
-                    <mat-card-subtitle>{{job.organisation}} | {{job.startDate}} - {{job.endDate}}</mat-card-subtitle>
-                </mat-card-header>
-                <mat-card-content>
-                    <p>{{job.description}}</p>
-                </mat-card-content>
-            </mat-card>
+        <mat-card class="job-card zoom-in">
+            <mat-card-header>
+                <mat-card-title><b>{{job.title}}</b></mat-card-title>
+                <mat-card-subtitle>{{job.organisation}} | {{job.startDate}} - {{job.endDate}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{job.description}}</p>
+            </mat-card-content>
+        </mat-card>
         }
     </div>
 </div>
