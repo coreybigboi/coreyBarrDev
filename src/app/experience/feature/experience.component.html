@@ -1,18 +1,20 @@
-<div class="loading-container" *ngIf="jobs.length === 0; else content">
+@if ((jobs | async)?.length === 0) {
+<div class="loading-container">
     <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
 </div>
-
-<ng-template #content>
-    <div class="experience-page-container">
-        <app-terminal-text [textList]="TerminalText"></app-terminal-text>
-        <app-coloured-box [colour]="Blue">
-            <div class="dialog">
-                <img ngSrc="assets/sprites/cb_work.gif" alt="Gif of Corey looking professional." class="centred" height="160" width="160" priority>
-                <app-animated-text [text]="Dialogue"></app-animated-text>
-            </div>
-        </app-coloured-box>
-        <div class="job-list">
-            <mat-card class="job-card zoom-in" *ngFor="let job of jobs | sortExperienceByYear;">
+} @else {
+<div class="experience-page-container">
+    <app-terminal-text [textList]="TerminalText"></app-terminal-text>
+    <app-coloured-box [colour]="Blue">
+        <div class="dialog">
+            <img ngSrc="assets/sprites/cb_work.gif" alt="Gif of Corey looking professional." class="centred"
+                height="160" width="160" priority>
+            <app-animated-text [text]="Dialogue"></app-animated-text>
+        </div>
+    </app-coloured-box>
+    <div class="job-list">
+        @for (job of (jobs | async) ?? [] | sortExperienceByYear; track job.id) {
+            <mat-card class="job-card zoom-in">
                 <mat-card-header>
                     <mat-card-title><b>{{job.title}}</b></mat-card-title>
                     <mat-card-subtitle>{{job.organisation}} | {{job.startDate}} - {{job.endDate}}</mat-card-subtitle>
@@ -21,6 +23,7 @@
                     <p>{{job.description}}</p>
                 </mat-card-content>
             </mat-card>
-        </div>
+        }
     </div>
-</ng-template>
+</div>
+}
