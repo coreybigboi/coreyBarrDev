@@ -39,10 +39,10 @@ export class EducationComponent {
   readonly TerminalText = ["Education"];
   readonly Blue = Colours.Blue;
 
-  educationList: Observable<Education[]>;
+  educationList$: Observable<Education[]>;
 
   constructor(private educationService: EducationService, private _bottomSheet: MatBottomSheet) {
-    this.educationList = this.educationService.getEducation();
+    this.educationList$ = this.educationService.getEducation();
   }
 
   openBottomSheet(): void {

@@ -19,9 +19,9 @@ import { Observable } from 'rxjs';
   styleUrl: './favourite-games.component.css'
 })
 export class FavouriteGamesComponent {
-  games: Observable<Game[]>;
+  games$: Observable<Game[]>;
 
   constructor(private gamesService: FavouriteGamesService) {
-    this.games = this.gamesService.getGames(); 
+    this.games$ = this.gamesService.getGames();
   }
 }

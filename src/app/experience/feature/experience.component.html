@@ -1,4 +1,4 @@
-@if ((jobs | async)?.length === 0) {
+@if ((jobs$ | async)?.length === 0) {
 <div class="loading-container">
     <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
 </div>
@@ -13,7 +13,7 @@
         </div>
     </app-coloured-box>
     <div class="job-list">
-        @for (job of (jobs | async) ?? [] | sortExperienceByYear; track job.id) {
+        @for (job of (jobs$ | async) ?? [] | sortExperienceByYear; track job.id) {
         <mat-card class="job-card zoom-in">
             <mat-card-header>
                 <mat-card-title><b>{{job.title}}</b></mat-card-title>

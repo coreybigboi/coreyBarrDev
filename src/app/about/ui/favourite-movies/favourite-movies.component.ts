@@ -19,9 +19,9 @@ import { Observable } from 'rxjs';
   styleUrl: './favourite-movies.component.css'
 })
 export class FavouriteMoviesComponent {
-  movies: Observable<Movie[]>;
+  movies$: Observable<Movie[]>;
 
   constructor(private moviesService: FavouriteMoviesService) {
-    this.movies = this.moviesService.getMovies();
+    this.movies$ = this.moviesService.getMovies();
   }
 }

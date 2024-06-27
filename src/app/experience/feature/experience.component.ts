@@ -34,9 +34,9 @@ export class ExperienceComponent {
   readonly TerminalText = ["Experience"];
   readonly Blue = Colours.Blue;
 
-  jobs: Observable<Job[]>;
+  jobs$: Observable<Job[]>;
 
   constructor(private experienceService: ExperienceService) {
-    this.jobs = this.experienceService.getExperience();
+    this.jobs$ = this.experienceService.getExperience();
   }
 }

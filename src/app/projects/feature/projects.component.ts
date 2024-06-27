@@ -36,9 +36,9 @@ export class ProjectsComponent {
   readonly TerminalText = ["My Projects"];
   readonly Blue = Colours.Blue;
 
-  projects: Observable<Project[]>;
+  projects$: Observable<Project[]>;
 
   constructor(private projectService: ProjectsService) {
-    this.projects = this.projectService.getProjects(); 
+    this.projects$ = this.projectService.getProjects(); 
   }
 }

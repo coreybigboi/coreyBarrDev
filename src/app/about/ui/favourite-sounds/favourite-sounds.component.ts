@@ -22,6 +22,6 @@ export class FavouriteSoundsComponent {
   soundsList$: Observable<Sound[]>;
 
   constructor(private soundService: FavouriteSoundsService) {
-    this.soundsList$ = this.soundService.getSounds(); 
+    this.soundsList$ = this.soundService.getSounds();
   }
 }

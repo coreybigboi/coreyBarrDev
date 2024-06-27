@@ -1,4 +1,4 @@
-@if ((educationList | async)?.length === 0) {
+@if ((educationList$ | async)?.length === 0) {
 <div class="loading-container">
     <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
 </div>
@@ -13,7 +13,7 @@
         </div>
     </app-coloured-box>
     <div class="education-list">
-        @for (education of (educationList | async) ?? [] | sortEducationByDate; track education.id) {
+        @for (education of (educationList$ | async) ?? [] | sortEducationByDate; track education.id) {
         <mat-card class="education-card zoom-in">
             <mat-card-header>
                 <mat-card-title><b>{{education.institution}}</b></mat-card-title>
