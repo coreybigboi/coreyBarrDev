@@ -1,14 +1,14 @@
-<div class="loading-container" *ngIf="games.length === 0; else content">
+@if ((games | async)?.length === 0) {
+<div class="loading-container">
     <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
 </div>
-
-<ng-template #content>
-    <div class="favourite-games-container">
-        <h2 class="blue">My top {{games.length}} favourite games 🎮</h2>
-        <ol>
-            <li *ngFor="let game of games">
-                <h3>{{game.title}} ({{game.year}})</h3>
-            </li>
-        </ol>
-    </div>
-</ng-template>
+} @else {
+<div class="favourite-games-container">
+    <h2 class="blue">My top {{(games | async)?.length}} favourite games 🎮</h2>
+    <ol>
+        @for(game of (games | async) ?? []; track game.id) {
+        <li><b>{{game.title}} ({{game.year}})</b></li>
+        }
+    </ol>
+</div>
+}
