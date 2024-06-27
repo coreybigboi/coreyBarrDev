@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NgFor } from "@angular/common";
+import { AsyncPipe, NgFor } from "@angular/common";
 import { NgIf } from '@angular/common';
 import { MatProgressBar } from '@angular/material/progress-bar';
 import  { FavouriteMoviesService } from "../../data-access/favourite-movies.service";
 import { Movie } from "../../../shared/models/movie";
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-favourite-movies',
@@ -11,20 +12,16 @@ import { Movie } from "../../../shared/models/movie";
   imports: [
     NgFor,
     NgIf,
+    AsyncPipe,
     MatProgressBar
   ],
   templateUrl: './favourite-movies.component.html',
   styleUrl: './favourite-movies.component.css'
 })
 export class FavouriteMoviesComponent {
-  movies: Movie[] = [];
+  movies: Observable<Movie[]>;
 
   constructor(private moviesService: FavouriteMoviesService) {
-  }
-
-  ngOnInit(): void {
-    this.moviesService.getMovies().subscribe((data: Movie[]) => {
-      this.movies = data;
-    });
+    this.movies = this.moviesService.getMovies();
   }
 }

@@ -7,7 +7,9 @@
     <h2 class="blue">My top {{(games | async)?.length}} favourite games 🎮</h2>
     <ol>
         @for(game of (games | async) ?? []; track game.id) {
-        <li><b>{{game.title}} ({{game.year}})</b></li>
+        <li>
+            <h3>{{game.title}} ({{game.year}})</h3>
+        </li>
         }
     </ol>
 </div>

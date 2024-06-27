@@ -1,14 +1,17 @@
-<div class="loading-container" *ngIf="movies.length === 0; else content">
+@if ((movies | async)?.length === 0) {
+<div class="loading-container">
     <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
 </div>
+} @else {
+<div class="movie-list-container">
+    <h2 class="blue">My top {{(movies | async)?.length}} favourite movies 🎥</h2>
+    <ol>
+        @for (movie of (movies | async) ?? []; track movie.id) {
+        <li>
+            <h3>{{movie.title}} ({{movie.year}})</h3>
+        </li>
+        }
+    </ol>
+</div>
 
-<ng-template #content>
-    <div class="movie-list-container">
-        <h2 class="blue">My top {{movies.length}} favourite movies 🎥</h2>
-        <ol>
-            <li *ngFor="let movie of movies">
-                <h3>{{movie.title}} ({{movie.year}})</h3>
-            </li>
-        </ol>
-    </div>
-</ng-template>
+}
